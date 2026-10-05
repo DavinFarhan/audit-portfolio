@@ -128,4 +128,4 @@ My security engagements follow a structured 8-phase auditing framework:
 
 - **GitHub:** [@farhandavin](https://github.com/farhandavin)
 - **CodeHawks:** [farhandavin](https://codehawks.com)
-- **Specialization:** Solidity, Vyper, EVM Architecture, DeFi Security, AMM & Lending Math, Access Control & Storage Security
+- **Specialization:** Smart Contract Auditing, Solidity, EVM Architecture, Stateful Fuzzing, Formal Verification (Certora/CVL)
