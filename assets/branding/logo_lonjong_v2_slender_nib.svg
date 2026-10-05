@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- 60% PUTIH BERSIH: Latar Belakang & Ruang Negatif Lapang -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <!-- VARIASI 2: THE SLENDER AUDITOR NIB (Lonjong Ramping Ekstra - Rasio 1 : 1.9) -->
+  <g transform="translate(0, 0)">
+    <!-- 30% DEEP NAVY: Faset Atas Ramping & Sayap Tajam -->
+    <!-- 1. Faset Atas Ramping Menjulang -->
+    <polygon points="256,45 304,140 256,182 208,140" fill="#0B192C"/>
+
+    <!-- 2. Sayap Kiri Sangat Ramping -->
+    <polygon points="200,150 156,225 204,310 248,192" fill="#0B192C"/>
+
+    <!-- 3. Sayap Kanan Sangat Ramping -->
+    <polygon points="312,150 356,225 308,310 264,192" fill="#0B192C"/>
+
+    <!-- 10% EMERALD GREEN: Faset Bawah Ramping Meruncing Dalam -->
+    <!-- 4. Ujung Pena Auditor Panjang -->
+    <polygon points="256,202 292,310 256,468 220,310" fill="#10B981"/>
+
+    <!-- Titik Inti Putih Bersih -->
+    <circle cx="256" cy="270" r="9" fill="#FFFFFF"/>
+  </g>
+</svg>

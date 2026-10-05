@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+
+    <!-- Latar Belakang -->
+    <!-- 60% Pure White Canvas -->
+    <rect width="1000" height="1000" fill="#FFFFFF"/>
+
+    <g id="hex-shield-nib">
+        <!-- TOP SECTION: HEXAGONAL PRISM VAULT (DEEP NAVY) -->
+        <!-- Puncak Atas -->
+        <polygon points="500,160 380,260 500,350 620,260" fill="#142642" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Sayap Heksagonal Kiri Atas -->
+        <polygon points="500,160 240,310 380,260" fill="#0B192C" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Sayap Heksagonal Kanan Atas -->
+        <polygon points="500,160 620,260 760,310" fill="#0D2039" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Dinding Heksagonal Kiri (Lateral) -->
+        <polygon points="240,310 250,490 390,440 380,260" fill="#091526" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Dinding Heksagonal Kanan (Lateral) -->
+        <polygon points="760,310 620,260 610,440 750,490" fill="#182E4E" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Facet Transisi Tengah Bawah -->
+        <polygon points="380,260 500,350 500,470 390,440" fill="#10223A" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        <polygon points="620,260 610,440 500,470 500,350" fill="#1C3456" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+        <!-- BOTTOM SECTION: BROAD SHIELD-NIB (WARM AMBER) -->
+        <!-- Bilah Kiri Amber -->
+        <path d="M 494 485 
+                 L 380 450 
+                 L 255 500 
+                 L 494 840 
+                 L 494 650 
+                 A 24 24 0 0 1 494 602 
+                 L 494 485 Z" 
+              fill="#F59E0B" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+
+        <!-- Bilah Kanan Amber (Dual Tone Shadow) -->
+        <path d="M 506 485 
+                 L 506 602 
+                 A 24 24 0 0 1 506 650 
+                 L 506 840 
+                 L 745 500 
+                 L 620 450 
+                 L 506 485 Z" 
+              fill="#D97706" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+
+        <!-- Breather Hole & Central Slit -->
+        <circle cx="500" cy="626" r="24" fill="#FFFFFF"/>
+        <circle cx="500" cy="626" r="10" fill="#0B192C"/>
+        <line x1="500" y1="650" x2="500" y2="840" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+    </g>
+    
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <!-- Transparent Canvas -->
+  <g id="sample_4_faceted_origami">
+    <!-- 30% DEEP NAVY: GEOMETRIC DIAMOND PRISM FACETS -->
+    <!-- 1. Central Top Rhombus/Spire -->
+    <polygon points="500,210 376.1,431.2 500,505 623.9,431.2" 
+             fill="#14253F" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    
+    <!-- 2. Upper Left Wing -->
+    <polygon points="500,210 290,380 376.1,431.2" 
+             fill="#0B192C" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    
+    <!-- 3. Upper Right Wing -->
+    <polygon points="500,210 623.9,431.2 710,380" 
+             fill="#192E4E" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    
+    <!-- 4. Lower Left Flank -->
+    <polygon points="290,380 290,585 500,505 376.1,431.2" 
+             fill="#091626" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    
+    <!-- 5. Lower Right Flank -->
+    <polygon points="710,380 623.9,431.2 500,505 710,585" 
+             fill="#1F385E" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- 10% WARM AMBER: SOLID FOUNTAIN PEN NIB WITH BREATH & SLIT -->
+    <!-- Left Amber Blade -->
+    <path d="M 500,505 
+             L 290,585 
+             L 500,810 
+             L 500,649 
+             A 24 24 0 0 1 500,601 
+             L 500,505 Z" 
+          fill="#F59E0B" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Right Amber Blade -->
+    <path d="M 500,505 
+             L 500,601 
+             A 24 24 0 0 1 500,649 
+             L 500,810 
+             L 710,585 
+             L 500,505 Z" 
+          fill="#D97706" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Breather Hole Ring (Clean Negative Space #FFFFFF) -->
+    <circle cx="500" cy="625" r="24" fill="#FFFFFF"/>
+    
+    <!-- Cryptographic Verification Node (Deep Navy #0B192C) -->
+    <circle cx="500" cy="625" r="10" fill="#0B192C"/>
+
+    <!-- Vertical Ink Slit (Strictly from Breather Hole to Nib Tip) -->
+    <line x1="500" y1="649" x2="500" y2="810" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+  </g>
+</svg>

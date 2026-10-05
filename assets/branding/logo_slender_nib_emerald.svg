@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Emerald Green Gradient (Integritas, Verifikasi Lolos, & Perlindungan) -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 60% PUTIH BERSIH: Latar Belakang & Ruang Negatif (Transparansi Mutlak) -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <!-- STRUKTUR LOGO: 30% DEEP NAVY + 10% EMERALD GREEN -->
+  <g transform="translate(0, 0)">
+    <!-- 30% DEEP NAVY: Faset Puncak & Sayap Samping Geometris -->
+    <!-- 1. Puncak Atas -->
+    <polygon points="256,45 304,140 256,182 208,140" fill="#0B192C"/>
+
+    <!-- 2. Sayap Kiri -->
+    <polygon points="200,150 156,225 204,310 248,192" fill="#0B192C"/>
+
+    <!-- 3. Sayap Kanan -->
+    <polygon points="312,150 356,225 308,310 264,192" fill="#0B192C"/>
+
+    <!-- 10% EMERALD GREEN: Mata Pena Kaligrafi dengan Celah Tinta & Lubang Nafas -->
+    <!-- Bilah Kiri Hijau -->
+    <path d="M 252 202 
+             L 220 310 
+             L 252 468 
+             L 252 289 
+             A 14 14 0 0 1 252 261 
+             L 252 202 
+             Z" 
+          fill="url(#emeraldGrad)"/>
+
+    <!-- Bilah Kanan Hijau -->
+    <path d="M 260 202 
+             L 260 261 
+             A 14 14 0 0 1 260 289 
+             L 260 468 
+             L 292 310 
+             L 260 202 
+             Z" 
+          fill="url(#emeraldGrad)"/>
+
+    <!-- Lubang Nafas Pena (Breather Hole) - Putih Bersih Transparan -->
+    <circle cx="256" cy="275" r="14" fill="#FFFFFF"/>
+
+    <!-- Titik Inti Node Kripto di Dalam Lubang (Single Source of Truth / Deep Navy) -->
+    <circle cx="256" cy="275" r="6" fill="#0B192C"/>
+  </g>
+</svg>

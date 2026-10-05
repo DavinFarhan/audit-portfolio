@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+
+    <!-- Latar Belakang -->
+    <!-- Transparent Canvas -->
+
+    <g id="broad-winged-falcon-nib">
+        <!-- TOP SECTION: ARCHITECTURAL CHEVRON MANTLE (DEEP NAVY) -->
+        <!-- Puncak Segitiga Atas -->
+        <polygon points="500,160 360,300 500,380 640,300" fill="#13243D" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Sayap Luar Kiri Falcon -->
+        <polygon points="500,160 250,330 350,300" fill="#0B192C" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        <polygon points="250,330 270,490 390,440 350,300" fill="#091524" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Sayap Luar Kanan Falcon -->
+        <polygon points="500,160 650,300 750,330" fill="#0E2038" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        <polygon points="750,330 650,300 610,440 730,490" fill="#192F4F" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        
+        <!-- Chevron Inti Navy -->
+        <polygon points="350,300 500,380 430,470 390,440" fill="#10223A" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        <polygon points="650,300 610,440 570,470 500,380" fill="#1C3558" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+        <polygon points="500,380 430,470 500,520 570,470" fill="#152843" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+        <!-- BOTTOM SECTION: WIDE-SHOULDERED FALCON NIB (AMBER GOLD) -->
+        <!-- Bilah Kiri Amber -->
+        <path d="M 494 530 
+                 L 425 480 
+                 L 275 500 
+                 L 330 590 
+                 L 494 840 
+                 L 494 670 
+                 A 24 24 0 0 1 494 622 
+                 L 494 530 Z" 
+              fill="#F59E0B" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+
+        <!-- Bilah Kanan Amber -->
+        <path d="M 506 530 
+                 L 506 622 
+                 A 24 24 0 0 1 506 670 
+                 L 506 840 
+                 L 670 590 
+                 L 725 500 
+                 L 575 480 
+                 L 506 530 Z" 
+              fill="#D97706" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+
+        <!-- Breather Hole & Central Slit -->
+        <circle cx="500" cy="646" r="24" fill="#FFFFFF"/>
+        <circle cx="500" cy="646" r="10" fill="#0B192C"/>
+        <line x1="500" y1="670" x2="500" y2="840" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+    </g>
+    
+</svg>

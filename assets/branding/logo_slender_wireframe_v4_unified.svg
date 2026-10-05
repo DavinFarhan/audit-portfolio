@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#FFFFFF"/>
+  <g transform="translate(0, 0)">
+
+    <!-- UNIFIED CONTINUOUS WIREFRAME -->
+    <!-- Top Navy Facets Outline -->
+    <polygon points="256,45 304,140 256,182 208,140" 
+             fill="none" stroke="#0B192C" stroke-width="9" stroke-linejoin="round"/>
+    <polygon points="200,150 156,225 204,310 248,192" 
+             fill="none" stroke="#0B192C" stroke-width="9" stroke-linejoin="round"/>
+    <polygon points="312,150 356,225 308,310 264,192" 
+             fill="none" stroke="#0B192C" stroke-width="9" stroke-linejoin="round"/>
+
+    <!-- Unified Amber Nib Outer Frame (Hollow) -->
+    <polygon points="256,202 220,310 256,468 292,310" 
+             fill="none" stroke="#F59E0B" stroke-width="9" stroke-linejoin="round"/>
+
+    <!-- Central Vertical Slit Line -->
+    <line x1="256" y1="289" x2="256" y2="468" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Breather Hole Ring (Hollow Ring) -->
+    <circle cx="256" cy="275" r="14" fill="#FFFFFF" stroke="#F59E0B" stroke-width="7"/>
+    <!-- Center Single Source of Truth Node -->
+    <circle cx="256" cy="275" r="6" fill="#0B192C"/>
+    
+  </g>
+</svg>

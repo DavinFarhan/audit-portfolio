@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- 60% PUTIH BERSIH: Latar Belakang & Ruang Negatif (Lapang & Transparan) -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <!-- STRUKTUR LOGO: 30% DEEP NAVY + 10% EMERALD GREEN ACCENT -->
+  <g transform="translate(0, 15)">
+    <!-- 30% DEEP NAVY (Fondasi Profesionalisme & Komitmen) -->
+    <!-- 1. Faset Atas: Analisis Objektif & Ketelitian Riset -->
+    <polygon points="256,90 325,165 256,202 187,165" fill="#0B192C"/>
+
+    <!-- 2. Sayap Kiri: Metodologi Tanpa Bias & Transparansi -->
+    <polygon points="175,176 120,238 190,320 245,214" fill="#0B192C"/>
+
+    <!-- 3. Sayap Kanan: Validasi Empiris & Standar Kode -->
+    <polygon points="337,176 392,238 322,320 267,214" fill="#0B192C"/>
+
+    <!-- 10% EMERALD ACCENT: Sentuhan Kemudahan, Integritas, & Status Terverifikasi -->
+    <!-- 4. Faset Bawah: Ujung Verifikasi / Mata Pena Auditor -->
+    <polygon points="256,224 298,322 256,400 214,322" fill="#10B981"/>
+
+    <!-- Titik Inti Putih Bersih (Single Source of Truth / Kejujuran Absolut) -->
+    <circle cx="256" cy="285" r="11" fill="#FFFFFF"/>
+  </g>
+</svg>

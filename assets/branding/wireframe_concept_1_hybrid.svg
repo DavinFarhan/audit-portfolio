@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="#FFFFFF"/>
+  <g id="wireframe-hybrid-skeleton">
+    <!-- TOP SECTION: HOLLOW WIREFRAME LATTICE (DEEP NAVY STRUTS & NODES) -->
+    <!-- Outer perimeter struts -->
+    <polygon points="500,210 270,380 270,585 500,505 730,585 730,380" 
+             fill="none" stroke="#0B192C" stroke-width="16" stroke-linejoin="round"/>
+    
+    <!-- Internal lattice struts (Bolong-bolong tembus pandang) -->
+    <!-- Diagonal crossing struts -->
+    <line x1="500" y1="210" x2="270" y2="585" stroke="#0B192C" stroke-width="14" stroke-linecap="round"/>
+    <line x1="500" y1="210" x2="730" y2="585" stroke="#0B192C" stroke-width="14" stroke-linecap="round"/>
+    <line x1="270" y1="380" x2="500" y2="505" stroke="#0B192C" stroke-width="14" stroke-linecap="round"/>
+    <line x1="730" y1="380" x2="500" y2="505" stroke="#0B192C" stroke-width="14" stroke-linecap="round"/>
+    <line x1="270" y1="380" x2="730" y2="380" stroke="#0B192C" stroke-width="14" stroke-linecap="round"/>
+    
+    <!-- Vertical center spine strut -->
+    <line x1="500" y1="210" x2="500" y2="505" stroke="#0B192C" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Network Nodes (Titik Simpul Kripto di persimpangan) -->
+    <circle cx="500" cy="210" r="14" fill="#0B192C"/>
+    <circle cx="270" cy="380" r="14" fill="#0B192C"/>
+    <circle cx="730" cy="380" r="14" fill="#0B192C"/>
+    <circle cx="270" cy="585" r="14" fill="#0B192C"/>
+    <circle cx="730" cy="585" r="14" fill="#0B192C"/>
+    <!-- Intersection central node -->
+    <circle cx="500" cy="380" r="16" fill="#F59E0B" stroke="#0B192C" stroke-width="6"/>
+
+    <!-- BOTTOM SECTION: SOLID WARM AMBER FOUNTAIN PEN NIB -->
+    <path d="M 500,505 
+             L 270,585 
+             L 500,810 
+             L 500,651 
+             A 26 26 0 0 1 500,599 
+             L 500,505 Z" 
+          fill="#F59E0B" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <path d="M 500,505 
+             L 500,599 
+             A 26 26 0 0 1 500,651 
+             L 500,810 
+             L 730,585 
+             L 500,505 Z" 
+          fill="#D97706" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Breather Hole & Central Slit -->
+    <circle cx="500" cy="625" r="26" fill="#FFFFFF"/>
+    <circle cx="500" cy="625" r="11" fill="#0B192C"/>
+    <line x1="500" y1="651" x2="500" y2="810" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="#FFFFFF"/>
+  <g id="sample1-balanced-diamond">
+    <!-- TOP SECTION: DEEP NAVY GEOMETRIC FACETS -->
+    <!-- Facet 1: Top Apex Central Triangle -->
+    <polygon points="500,160 395,330 500,410 605,330" fill="#13243D" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Facet 2: Upper Left Wing -->
+    <polygon points="500,160 290,390 395,330" fill="#0B192C" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Facet 3: Upper Right Wing -->
+    <polygon points="500,160 605,330 710,390" fill="#0E1F36" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Facet 4: Lower Left Flank -->
+    <polygon points="290,390 290,540 500,410 395,330" fill="#091627" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Facet 5: Lower Right Flank -->
+    <polygon points="710,390 605,330 500,410 710,540" fill="#1A3052" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+
+    <!-- BOTTOM SECTION: WARM AMBER FOUNTAIN PEN NIB -->
+    <!-- Left Blade (Light Amber #F59E0B) -->
+    <path d="M 495 414 
+             L 286 544 
+             L 495 840 
+             L 495 574 
+             A 24 24 0 0 1 495 526 
+             L 495 414 Z" 
+          fill="#F59E0B" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Right Blade (Warm Gold #D97706) -->
+    <path d="M 505 414 
+             L 505 526 
+             A 24 24 0 0 1 505 574 
+             L 505 840 
+             L 714 544 
+             L 505 414 Z" 
+          fill="#D97706" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Breather Hole Ring (White) -->
+    <circle cx="500" cy="550" r="24" fill="#FFFFFF"/>
+    <!-- Central Node (Deep Navy) -->
+    <circle cx="500" cy="550" r="10" fill="#0B192C"/>
+    <!-- Central Slit -->
+    <line x1="500" y1="574" x2="500" y2="840" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- 60% PUTIH BERSIH: Latar Belakang & Ruang Negatif Lapang -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <!-- VARIASI 4: THE SLENDER AMBER FLAME (Lonjong Ramping + Aksen Warm Amber) -->
+  <g transform="translate(0, 0)">
+    <!-- 30% DEEP NAVY: Faset Atas Ramping & Sayap Tajam -->
+    <polygon points="256,45 304,140 256,182 208,140" fill="#0B192C"/>
+    <polygon points="200,150 156,225 204,310 248,192" fill="#0B192C"/>
+    <polygon points="312,150 356,225 308,310 264,192" fill="#0B192C"/>
+
+    <!-- 10% SOFT WARM AMBER: Ujung Pencerahan & Kemurahan Hati -->
+    <polygon points="256,202 292,310 256,468 220,310" fill="#F59E0B"/>
+
+    <!-- Titik Inti Putih Bersih -->
+    <circle cx="256" cy="270" r="9" fill="#FFFFFF"/>
+  </g>
+</svg>

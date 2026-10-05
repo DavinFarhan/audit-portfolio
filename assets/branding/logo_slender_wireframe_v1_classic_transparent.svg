@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g transform="translate(0, 0)">
+
+    <!-- 100% HOLLOW WIREFRAME: BENTUK ASLI PERSIS -->
+    <!-- 1. Puncak Atas (Deep Navy Stroke) -->
+    <polygon points="256,45 304,140 256,182 208,140" 
+             fill="none" stroke="#0B192C" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- 2. Sayap Kiri (Deep Navy Stroke) -->
+    <polygon points="200,150 156,225 204,310 248,192" 
+             fill="none" stroke="#0B192C" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- 3. Sayap Kanan (Deep Navy Stroke) -->
+    <polygon points="312,150 356,225 308,310 264,192" 
+             fill="none" stroke="#0B192C" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- 4. Bilah Kiri Amber (Warm Amber Stroke, Hollow Fill) -->
+    <path d="M 252 202 
+             L 220 310 
+             L 252 468 
+             L 252 289 
+             A 14 14 0 0 1 252 261 
+             L 252 202 Z" 
+          fill="none" stroke="#F59E0B" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- 5. Bilah Kanan Amber (Warm Amber Stroke, Hollow Fill) -->
+    <path d="M 260 202 
+             L 260 261 
+             A 14 14 0 0 1 260 289 
+             L 260 468 
+             L 292 310 
+             L 260 202 Z" 
+          fill="none" stroke="#F59E0B" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- 6. Breather Hole Ring (Hollow Ring) -->
+    <circle cx="256" cy="275" r="14" fill="none" stroke="#F59E0B" stroke-width="6"/>
+
+    <!-- 7. Titik Inti Node Kripto (Solid Navy Node Center) -->
+    <circle cx="256" cy="275" r="6" fill="#0B192C"/>
+    
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- 60% PUTIH BERSIH: Latar Belakang & Ruang Negatif Lapang -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <!-- VARIASI 3: THE ELONGATED HEX-COLUMN (Lonjong Geometris Heksagonal) -->
+  <g transform="translate(0, 0)">
+    <!-- 30% DEEP NAVY: Faset Atas & Sayap Datar Samping -->
+    <!-- 1. Puncak Heksagon -->
+    <polygon points="256,55 315,130 256,175 197,130" fill="#0B192C"/>
+
+    <!-- 2. Sayap Kiri dengan Sisi Vertikal -->
+    <polygon points="188,140 148,195 148,275 200,325 248,188" fill="#0B192C"/>
+
+    <!-- 3. Sayap Kanan dengan Sisi Vertikal -->
+    <polygon points="324,140 364,195 364,275 312,325 264,188" fill="#0B192C"/>
+
+    <!-- 10% EMERALD GREEN: Ujung Verifikasi Meruncing -->
+    <polygon points="256,200 298,325 256,455 214,325" fill="#10B981"/>
+
+    <!-- Titik Inti Putih Bersih -->
+    <circle cx="256" cy="275" r="10" fill="#FFFFFF"/>
+  </g>
+</svg>

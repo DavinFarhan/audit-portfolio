@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="none"/>
+  <g id="option-d-falcon-wide">
+    <!-- TOP SECTION: ARCHITECTURAL CHEVRON MANTLE (DEEP NAVY) -->
+    <!-- Top Central Diamond -->
+    <polygon points="500,160 380,285 500,365 620,285" fill="#152640" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Outer Wing Left -->
+    <polygon points="500,160 250,370 380,285" fill="#0B192C" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Outer Wing Right -->
+    <polygon points="500,160 620,285 750,370" fill="#0E2038" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Lower Stepped Wing Left -->
+    <polygon points="250,370 260,520 400,445 380,285" fill="#081424" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Lower Stepped Wing Right -->
+    <polygon points="750,370 620,285 600,445 740,520" fill="#182E4E" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Keystone Facets -->
+    <polygon points="380,285 500,365 500,415 400,445" fill="#10223A" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    <polygon points="620,285 600,445 500,415 500,365" fill="#1D3558" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+
+    <!-- BOTTOM SECTION: WIDE-SHOULDERED FALCON NIB -->
+    <path d="M 500 422 
+             L 256 530 
+             L 497 840 
+             L 497 585 
+             A 26 26 0 0 1 497 533 
+             L 497 422 Z" 
+          fill="#F59E0B" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <path d="M 500 422 
+             L 503 422 
+             L 503 533 
+             A 26 26 0 0 1 503 585 
+             L 503 840 
+             L 744 530 Z" 
+          fill="#D97706" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Breather Hole & Central Slit -->
+    <circle cx="500" cy="559" r="26" fill="#FFFFFF"/>
+    <circle cx="500" cy="559" r="11" fill="#0B192C"/>
+    <line x1="500" y1="585" x2="500" y2="840" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+  </g>
+</svg>

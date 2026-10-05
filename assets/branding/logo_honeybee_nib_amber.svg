@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- 60% PUTIH BERSIH: Latar Belakang Lapang (Transparansi Mutlak) -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <!-- SINTESIS: THE CYBER-HONEYBEE NIB (Lebah Heksagonal + Mata Pena Auditor) -->
+  <g transform="translate(0, 0)">
+    <!-- 30% DEEP NAVY: Kepala, Antena, & Sayap Heksagonal (Struktur Blockchain & Riset) -->
+    <!-- Kepala Geometris Lebah -->
+    <polygon points="256,58 290,105 256,128 222,105" fill="#0B192C"/>
+
+    <!-- Antena Minimalis -->
+    <path d="M 238 75 Q 215 50 198 55" fill="none" stroke="#0B192C" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 274 75 Q 297 50 314 55" fill="none" stroke="#0B192C" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Sayap Kiri Heksagonal -->
+    <polygon points="214,136 120,188 168,268 238,198" fill="#0B192C"/>
+
+    <!-- Sayap Kanan Heksagonal -->
+    <polygon points="298,136 392,188 344,268 274,198" fill="#0B192C"/>
+
+    <!-- 10% SOFT WARM AMBER: Perut Lebah / Mata Pena Kaligrafi dengan Celah Tinta -->
+    <!-- Bilah Kiri Amber -->
+    <path d="M 252 205 
+             L 215 315 
+             L 252 468 
+             L 252 295 
+             A 15 15 0 0 1 252 265 
+             L 252 205 
+             Z" 
+          fill="#F59E0B"/>
+
+    <!-- Bilah Kanan Amber -->
+    <path d="M 260 205 
+             L 260 265 
+             A 15 15 0 0 1 260 295 
+             L 260 468 
+             L 297 315 
+             L 260 205 
+             Z" 
+          fill="#F59E0B"/>
+
+    <!-- Lubang Nafas Pena / Node Kripto Pusat (Breather Hole) -->
+    <circle cx="256" cy="280" r="15" fill="#FFFFFF"/>
+    <circle cx="256" cy="280" r="6" fill="#0B192C"/>
+  </g>
+</svg>

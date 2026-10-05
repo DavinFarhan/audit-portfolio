@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="#FFFFFF"/>
+  <g id="option-c-hex-shield">
+    <!-- TOP SECTION: HEXAGONAL PRISM VAULT (DEEP NAVY) -->
+    <!-- Top Central Triangle -->
+    <polygon points="500,165 375,275 500,365 625,275" fill="#142642" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Top Left Shoulder -->
+    <polygon points="500,165 240,335 375,275" fill="#0B192C" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Top Right Shoulder -->
+    <polygon points="500,165 625,275 760,335" fill="#0D2039" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Left Hex Wall -->
+    <polygon points="240,335 250,515 390,445 375,275" fill="#091626" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Right Hex Wall -->
+    <polygon points="760,335 625,275 610,445 750,515" fill="#182E4E" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Center Infill -->
+    <polygon points="375,275 500,365 500,415 390,445" fill="#10223A" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    <polygon points="625,275 610,445 500,415 500,365" fill="#1C3456" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+
+    <!-- BOTTOM SECTION: BROAD SHIELD-NIB (WARM AMBER) -->
+    <path d="M 500 422 
+             L 246 525 
+             L 497 840 
+             L 497 585 
+             A 26 26 0 0 1 497 533 
+             L 497 422 Z" 
+          fill="#F59E0B" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <path d="M 500 422 
+             L 503 422 
+             L 503 533 
+             A 26 26 0 0 1 503 585 
+             L 503 840 
+             L 754 525 Z" 
+          fill="#D97706" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Breather Hole & Central Slit -->
+    <circle cx="500" cy="559" r="26" fill="#FFFFFF"/>
+    <circle cx="500" cy="559" r="11" fill="#0B192C"/>
+    <line x1="500" y1="585" x2="500" y2="840" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+  </g>
+</svg>

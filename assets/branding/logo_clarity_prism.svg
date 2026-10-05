@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgDark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+
+    <!-- Cyan Facet Gradient -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <!-- Emerald / Mint Chevron Gradient (Verification & Integrity) -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Subtle Amber Radiance (Murah Hati / Pencerahan) -->
+    <radialGradient id="prismLight" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base Canvas (Safe for circular avatar) -->
+  <rect width="512" height="512" rx="128" fill="url(#bgDark)"/>
+
+  <!-- Subtle Radiance -->
+  <circle cx="256" cy="256" r="160" fill="url(#prismLight)"/>
+
+  <!-- Ultra-Minimal Geometric Facets (Total 4 Polygons separated by 10px Negative Space) -->
+  <g transform="translate(0, 10)">
+    <!-- Top Apex Shard (Clarity & Research) -->
+    <polygon points="256,90 340,165 256,200 172,165" fill="#38BDF8" opacity="0.95"/>
+
+    <!-- Left Wing Shard (Transparency & Honesty) -->
+    <polygon points="160,178 244,215 195,330 115,245" fill="url(#cyanGrad)"/>
+
+    <!-- Right Wing Shard (Objectivity) -->
+    <polygon points="352,178 397,245 317,330 268,215" fill="url(#cyanGrad)"/>
+
+    <!-- Central Chevron / Shield Apex (Amanah, Menepati Janji & Terverifikasi) -->
+    <polygon points="256,225 305,335 256,420 207,335" fill="url(#emeraldGrad)"/>
+    
+    <!-- Central Pure Node (Fokus & Kualitas) -->
+    <circle cx="256" cy="290" r="12" fill="#FFFFFF"/>
+  </g>
+</svg>

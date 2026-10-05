@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="none"/>
+  <g id="option-a-classic-broad">
+    <!-- TOP SECTION: DEEP NAVY CRYSTAL PRISM -->
+    <!-- Top Center Triangle -->
+    <polygon points="500,160 380,355 500,410 620,355" fill="#142640" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Upper Left Wing -->
+    <polygon points="500,160 270,380 380,355" fill="#0B192C" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Upper Right Wing -->
+    <polygon points="500,160 620,355 730,380" fill="#0E2038" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Lower Left Flank -->
+    <polygon points="270,380 270,525 380,355" fill="#081424" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    <polygon points="380,355 270,525 500,410" fill="#10223A" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    
+    <!-- Lower Right Flank -->
+    <polygon points="730,380 620,355 730,525" fill="#1C3558" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+    <polygon points="620,355 500,410 730,525" fill="#162D4D" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+
+    <!-- BOTTOM SECTION: BROAD WARM AMBER NIB -->
+    <!-- Solid Amber Body (Dual tone left/right for 3D luxury feel) -->
+    <!-- Left Half: Warm Amber #F59E0B -->
+    <path d="M 500 422 
+             L 266 535 
+             L 497 840 
+             L 497 576 
+             A 26 26 0 0 1 497 524 
+             L 497 422 Z" 
+          fill="#F59E0B" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Right Half: Deep Gold #D97706 -->
+    <path d="M 500 422 
+             L 503 422 
+             L 503 524 
+             A 26 26 0 0 1 503 576 
+             L 503 840 
+             L 734 535 Z" 
+          fill="#D97706" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Breather Hole Ring (Clean White Negative Space) -->
+    <circle cx="500" cy="550" r="26" fill="#FFFFFF"/>
+    <!-- Central Node (Deep Navy Verification Anchor) -->
+    <circle cx="500" cy="550" r="11" fill="#0B192C"/>
+    
+    <!-- Vertical Slit (Starts strictly from breather hole down to iridium tip) -->
+    <line x1="500" y1="576" x2="500" y2="840" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+  </g>
+</svg>
