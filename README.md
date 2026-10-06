@@ -22,6 +22,15 @@ Welcome to my Smart Contract Security Audit Portfolio. This repository showcases
 
 ---
 
+## 🔬 Formal Verification Case Studies (Certora CVL)
+
+| Case Study | Category | Tooling & Prover | Key Verified Properties | Spec / Case Study |
+| :--- | :---: | :--- | :--- | :---: |
+| **GasBad NFT Marketplace** | Differential Formal Verification | Certora Prover 6.x, Z3 / CVC5 | **State Equivalence** (Inline Yul vs Solidity), Opcode Hook Invariant (`Sstore` $\le$ `LOG4`), Anti-Havoc Dispatchers | [⚡ Case Study & Spec](./formal-verification/02-gas-bad-nft-marketplace) |
+| **Math Masters** | Fixed-Point Arithmetic | Certora Prover 6.x, Z3 / CVC5 | **`mulWadUp` Precision Monotonicity**, Rounding-Up Identity, SMT Counterexample for Injected Mutation | [🧮 Case Study & Spec](./formal-verification/01-math-master) |
+
+---
+
 ## 🔍 Featured Audit Highlights
 
 ### 1. [Vault Guardians Protocol Audit](./reports/VaultGuardians-Security-Audit-Report.pdf)
@@ -100,6 +109,39 @@ Welcome to my Smart Contract Security Audit Portfolio. This repository showcases
 
 ---
 
+## ⚡ Featured Formal Verification Highlights (Certora CVL)
+
+### 1. [Differential Equivalence Proving: GasBad NFT Marketplace](./formal-verification/02-gas-bad-nft-marketplace)
+- **Target:** Proving mathematical equivalence between a raw Yul/Assembly gas-optimized contract (`GasBadNftMarketplace.sol`) and its canonical Solidity reference (`NftMarketplace.sol`).
+- **Core CVL Techniques:**
+  - **Differential State Equivalence Rule:** Proved via a parametric CVL rule quantifying over all matching function selectors ($f, f_2$) that any method invocation executed from identical initial states leaves both contracts in identical post-execution storage states:
+    ```cvl
+    rule calling_any_function_should_result_in_each_contract_having_the_same_state(
+        method f, method f2, address listingAddr, uint256 tokenId, address seller
+    ) {
+        env e; calldataarg args;
+        require(gasBadMarketplace.getProceeds(e, seller) == marketplace.getProceeds(e, seller));
+        require(gasBadMarketplace.getListing(e, listingAddr, tokenId).price == marketplace.getListing(e, listingAddr, tokenId).price);
+        require(f.selector == f2.selector);
+        gasBadMarketplace.f(e, args);
+        marketplace.f2(e, args);
+        assert(gasBadMarketplace.getListing(e, listingAddr, tokenId).price == marketplace.getListing(e, listingAddr, tokenId).price);
+        assert(gasBadMarketplace.getProceeds(e, seller) == marketplace.getProceeds(e, seller));
+    }
+    ```
+  - **Opcode Hooks & State Invariants:** Direct bytecode-level verification instrumenting `Sstore` and `LOG4` opcodes to enforce that no storage update can occur without emitting transparency events:
+    $$\text{listingUpdatesCount} \le \text{log4Count}$$
+  - **Anti-Havoc Dispatcher Summaries:** Wildcard dispatcher summaries (`_.onERC721Received` & `_.safeTransferFrom => DISPATCHER(true)`) preventing state randomization while maintaining sound proof verification.
+
+### 2. [Fixed-Point Arithmetic Mathematical Proofs: MathMasters](./formal-verification/01-math-master)
+- **Target:** Solady/Solmate-inspired fixed-point arithmetic library (`MathMasters::mulWadUp`).
+- **Core CVL Techniques:**
+  - **Ceiling Division Invariant Proof:** Proved that for all non-overflowing inputs ($x \cdot y \le 2^{256} - 1$), the contract implementation strictly equals the mathematical ceiling division over unbounded integers (`mathint`):
+    $$\text{mulWadUp}(x, y) = \begin{cases} 0 & x \cdot y = 0 \\ \lfloor(x \cdot y - 1)/\text{WAD}\rfloor + 1 & x \cdot y > 0 \end{cases}$$
+  - **SMT Counterexample Discovery:** The Certora Prover mathematically disproved an injected mutation within milliseconds by generating concrete counterexample inputs violating mathematical bounds.
+
+---
+
 ## 🔬 Audit Methodology (The Tincho Method)
 
 My security engagements follow a structured 8-phase auditing framework:
@@ -109,7 +151,7 @@ My security engagements follow a structured 8-phase auditing framework:
 3. **Phase 2: Reconnaissance & Invariant Hypothesis** — Threat modeling, privileged actor analysis, and protocol invariant definitions.
 4. **Phase 3: Line-by-Line Code Review** — Systematic manual inspection of control flows, state transitions, and arithmetic operations (FREI-PI / CEI patterns).
 5. **Phase 4: Adversarial Attack Vectoring** — Modeling front-running/MEV, access control bypasses, storage transparency, reentrancy, and flash loan manipulations.
-6. **Phase 5: Automated Testing & PoC Construction** — Writing deterministic Foundry & Moccasin exploit test cases proving vulnerability validity and financial impact.
+6. **Phase 5: Automated Testing & Formal Verification** — Writing deterministic Foundry exploit test cases, stateful invariant fuzzing harnesses, and mathematical Certora CVL equivalence proofs.
 7. **Phase 6 & 7: Classification & Executive PDF Reporting** — Formatting findings according to CodeHawks severity standards and compiling publication-grade PDF reports with Pandoc & LaTeX (Eisvogel).
 8. **Phase 8: Mitigation Review & Re-Testing** — Verifying that client remediation patches resolve root causes without introducing regression issues.
 
@@ -118,6 +160,7 @@ My security engagements follow a structured 8-phase auditing framework:
 ## 🛠️ Security Tooling & Stack
 
 - **Testing & Execution Frameworks:** Foundry (`forge`, `cast`, `anvil`), Moccasin / Titanoboa, Hardhat
+- **Formal Verification & SMT Provers:** Certora Prover (`certoraRun`), CVL (Certora Verification Language), SMT Solvers (Z3, CVC5)
 - **Static Analysis & Linters:** Slither, Aderyn, Solhint
 - **Fuzzing & Invariant Testing:** Echidna, Foundry Invariant Testing (`vm.assume`, handler-based stateful fuzzing)
 - **Report Generation:** Pandoc, Eisvogel LaTeX Engine, KaTeX

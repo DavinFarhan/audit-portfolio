@@ -8,6 +8,16 @@
 *_cover.png
 *page-*.png
 test_*
+preview_*
+diff_*
+fixed_*
+new_*
+our_*
+user_*
+img1_*
+img2_*
+comparison_*
+cover_preview_*
 
 # Scratch directories
 assets/
