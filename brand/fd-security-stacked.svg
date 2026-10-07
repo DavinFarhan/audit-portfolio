@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="76.5 39.0 567.3 649.0" width="567" height="649" role="img" aria-label="FD Security - Smart Contract Audits">
+  <title>FD Security - Smart Contract Audits</title>
+  <g transform="translate(104 0)">
+  <defs>
+    <!-- Knock-out band parallel to the checkmark's long stroke (vector clip, no raster mask) -->
+    <clipPath id="st-cut">
+      <path clip-rule="evenodd" d="M-100 -100H612V612H-100Z
+               M346.7 319.8 L517.1 167.1 L474.5 119.5 L304.1 272.2 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Shield: hollow outline with a deliberate opening at the top -->
+  <path clip-path="url(#st-cut)"
+        d="M238 61 L96 104 V250 C96 352 164 424 256 464 C348 424 416 352 416 250 V104 L274 61"
+        fill="none" stroke="#0B1F3A" stroke-width="30" stroke-linejoin="round" stroke-linecap="butt"/>
+  <!-- F monogram -->
+  <path fill="#0B1F3A" d="M150 140 H240 V170 H180 V181 H226 V209 H180 V250 H150 Z"/>
+  <!-- D monogram -->
+  <path fill="#0B1F3A" fill-rule="evenodd"
+        d="M262 140 H304 A55 55 0 0 1 304 250 H262 Z
+           M292 170 H304 A25 25 0 0 1 304 220 H292 Z"/>
+  <!-- Verified checkmark breaking out of the shield -->
+  <polyline points="180,320 236,376 466,170" fill="none" stroke="#059669"
+            stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="360" y="598" text-anchor="middle" font-family="'Segoe UI', 'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-weight="700"
+        font-size="96" fill="#0B1F3A" letter-spacing="1.0">FD Security</text>
+  <text x="360" y="658" text-anchor="middle" font-family="'Segoe UI', 'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-weight="600"
+        font-size="30" fill="#059669" letter-spacing="6.6">SMART CONTRACT AUDITS</text>
+</svg>

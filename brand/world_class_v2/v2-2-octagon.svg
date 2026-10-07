@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="The Cipher Octagon">
+  <title>The Cipher Octagon</title>
+  <!-- 4 Monolithic Geometric Wedges creating an unshakeable vault aperture -->
+  <!-- Center is 256, 256. Center void size is 120x120 -->
+  <g fill="#0B1F3A">
+    <!-- Top Wedge -->
+    <polygon points="176,80 336,80 396,140 336,200 176,200"/>
+    <!-- Right Wedge (Emerald Accent: The Active Verification Shard) -->
+    <polygon points="432,176 432,336 372,396 312,336 312,176" fill="#059669"/>
+    <!-- Bottom Wedge -->
+    <polygon points="336,432 176,432 116,372 176,312 336,312"/>
+    <!-- Left Wedge -->
+    <polygon points="80,336 80,176 140,116 200,176 200,336"/>
+  </g>
+</svg>

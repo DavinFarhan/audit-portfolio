@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" width="640" height="720">
+  <g transform="translate(64, 20)">
+    
+  <title>Masterpiece 1: The Covenant Knot</title>
+  <!-- Two Interlocking Ribbons: Navy (Security & Fiduciary Duty) + Emerald (Truth & Verification) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left Ribbon: Navy Security Arch -->
+    <path d="M 256 80 
+             C 140 80 84 164 84 270 
+             C 84 376 160 436 256 436"
+          stroke="#0B1F3A" stroke-width="36"/>
+    
+    <!-- Right Ribbon: Emerald Truth Arch -->
+    <path d="M 256 436 
+             C 352 436 428 376 428 270 
+             C 428 164 372 80 256 80"
+          stroke="#059669" stroke-width="36"/>
+          
+    <!-- Central Negative Space Aperture: Golden Diamond Eye of Truth -->
+    <polygon points="256,190 306,260 256,330 206,260" 
+             stroke="#0B1F3A" stroke-width="16"/>
+             
+    <!-- Unbroken Core Spark (Titik Pusat Kebenaran Kriptografis) -->
+    <circle cx="256" cy="260" r="14" fill="#059669"/>
+  </g>
+
+  </g>
+  <text x="320" y="595" text-anchor="middle"
+        font-family="'Inter', -apple-system, sans-serif"
+        font-weight="800" font-size="82" fill="#0B1F3A" letter-spacing="2">FARHAN DAVIN</text>
+  <text x="320" y="652" text-anchor="middle"
+        font-family="'Inter', -apple-system, sans-serif"
+        font-weight="700" font-size="28" fill="#059669" letter-spacing="6">SMART CONTRACT AUDITOR</text>
+  <rect x="250" y="675" width="140" height="4" rx="2" fill="#0B1F3A" opacity="0.25"/>
+</svg>

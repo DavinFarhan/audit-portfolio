@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 960" width="800" height="960">
+  <rect width="800" height="960" fill="#070E18"/>
+  <g transform="translate(150, 40) scale(0.5)">
+    <!-- 1. Central Top Spire -->
+    <polygon points="500,210 364.3,431.2 500,505 635.7,431.2" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="500,210 270,380 364.3,431.2" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="500,210 635.7,431.2 730,380" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="270,380 270,585 500,505 364.3,431.2" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="730,380 635.7,431.2 500,505 730,585" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M 500,505 L 270,585 L 500,810 L 500,657 A 32 32 0 0 1 500,593 L 500,505 Z" fill="#F59E0B" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M 500,505 L 500,593 A 32 32 0 0 1 500,657 L 500,810 L 730,585 L 500,505 Z" fill="#D97706" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <circle cx="500" cy="625" r="32" fill="#FFFFFF"/>
+    <circle cx="500" cy="625" r="14" fill="#070E18"/>
+    <line x1="500" y1="657" x2="500" y2="810" stroke="#FFFFFF" stroke-width="12" stroke-linecap="square"/>
+  </g>
+  <text x="400" y="580" text-anchor="middle"
+        font-family="'Inter', 'Montserrat', -apple-system, sans-serif"
+        font-weight="800" font-size="64" fill="#F8FAFC" letter-spacing="3">FARHAN DAVIN</text>
+  <text x="400" y="632" text-anchor="middle"
+        font-family="'Inter', 'Montserrat', -apple-system, sans-serif"
+        font-weight="700" font-size="22" fill="#F59E0B" letter-spacing="7">SMART CONTRACT AUDITOR</text>
+  <rect x="330" y="656" width="140" height="4" rx="2" fill="#F59E0B" opacity="0.6"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 480" width="1440" height="480">
+  <rect width="1440" height="480" fill="#070E18"/>
+  <g transform="translate(60, 20) scale(0.44)">
+    <polygon points="500,210 364.3,431.2 500,505 635.7,431.2" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="500,210 270,380 364.3,431.2" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="500,210 635.7,431.2 730,380" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="270,380 270,585 500,505 364.3,431.2" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="730,380 635.7,431.2 500,505 730,585" fill="#16253D" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M 500,505 L 270,585 L 500,810 L 500,657 A 32 32 0 0 1 500,593 L 500,505 Z" fill="#F59E0B" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M 500,505 L 500,593 A 32 32 0 0 1 500,657 L 500,810 L 730,585 L 500,505 Z" fill="#D97706" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>
+    <circle cx="500" cy="625" r="32" fill="#FFFFFF"/>
+    <circle cx="500" cy="625" r="14" fill="#070E18"/>
+    <line x1="500" y1="657" x2="500" y2="810" stroke="#FFFFFF" stroke-width="12" stroke-linecap="square"/>
+  </g>
+  <text x="560" y="246" font-family="'Inter', 'Montserrat', -apple-system, sans-serif"
+        font-weight="800" font-size="88" fill="#F8FAFC" letter-spacing="2">FARHAN DAVIN</text>
+  <text x="564" y="316" font-family="'Inter', 'Montserrat', -apple-system, sans-serif"
+        font-weight="700" font-size="30" fill="#F59E0B" letter-spacing="6">SMART CONTRACT AUDITOR</text>
+  <rect x="564" y="342" width="140" height="4" rx="2" fill="#F59E0B" opacity="0.6"/>
+</svg>

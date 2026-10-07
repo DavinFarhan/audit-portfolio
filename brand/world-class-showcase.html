@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World-Class Brand Identity Showcase — Farhan Davin</title>
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --navy-dark: #071527;
+      --emerald: #059669;
+      --emerald-light: #10B981;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; padding: 48px 24px; }
+    .container { max-width: 1240px; margin: 0 auto; }
+
+    header { text-align: center; margin-bottom: 48px; }
+    .badge { display: inline-block; background: rgba(5, 150, 105, 0.12); color: var(--emerald); padding: 6px 18px; border-radius: 999px; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; }
+    h1 { font-size: 38px; color: var(--navy); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+    p.lead { font-size: 17px; color: var(--muted); max-width: 820px; margin: 0 auto; }
+
+    /* Insight Banner */
+    .insight-card {
+      background: linear-gradient(135deg, #0B1F3A 0%, #162F52 100%);
+      color: #FFF;
+      padding: 28px 32px;
+      border-radius: var(--radius);
+      margin-bottom: 48px;
+      box-shadow: 0 10px 30px rgba(11, 31, 58, 0.12);
+    }
+    .insight-card h3 { font-size: 20px; color: #10B981; margin-bottom: 8px; font-weight: 800; }
+    .insight-card p { font-size: 14.5px; color: #CBD5E1; line-height: 1.7; }
+
+    /* Showcase Grid 3 Cards */
+    .archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 28px;
+      margin-bottom: 56px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--emerald);
+      transform: translateY(-3px);
+    }
+
+    .card-header {
+      padding: 24px;
+      background: #FAFBFD;
+      border-bottom: 1px solid var(--border);
+    }
+    .tag {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .tag-blue { background: #DBEAFE; color: #1E40AF; }
+    .tag-emerald { background: #D1FAE5; color: #065F46; }
+    .tag-purple { background: #EDE9FE; color: #5B21B6; }
+
+    .card-header h2 { font-size: 22px; color: var(--navy); font-weight: 800; }
+    .card-header p.sub { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+
+    .canvas {
+      padding: 40px 24px;
+      background: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+      border-bottom: 1px solid var(--border);
+    }
+    .canvas img { max-width: 100%; max-height: 220px; object-fit: contain; }
+
+    /* Scale Row */
+    .scale-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 16px;
+      background: #F1F5F9;
+      border-bottom: 1px solid var(--border);
+    }
+    .scale-box { text-align: center; }
+    .scale-box img { display: block; margin: 0 auto 4px; }
+    .scale-label { font-size: 11px; font-weight: 700; color: var(--muted); }
+
+    .card-body { padding: 24px; flex-grow: 1; }
+    .section-label { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--emerald); letter-spacing: 1px; margin-bottom: 8px; }
+    .card-body p { font-size: 14px; color: #334155; margin-bottom: 16px; }
+
+    .values-list { list-style: none; }
+    .values-list li { font-size: 13.5px; color: #475569; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
+    .values-list li strong { color: var(--navy); }
+
+    .card-actions {
+      padding: 18px 24px;
+      background: #FAFBFD;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+    }
+    .btn {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .btn-primary { background: var(--navy); color: #FFF; }
+    .btn-accent { background: var(--emerald); color: #FFF; }
+    .btn-secondary { background: #FFF; border: 1px solid var(--border); color: #334155; }
+
+    footer { text-align: center; padding: 40px 0 20px; font-size: 14px; color: var(--muted); border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">World-Class Brand Identity</div>
+    <h1>Eksplorasi Logo Tingkat Dunia Tanpa Klise</h1>
+    <p class="lead">Menerapkan prinsip agensi desain legendaris dunia (Chermayeff &amp; Geismar &amp; Haviv dan Pentagram): Mengganti klise perisai &amp; centang generik dengan simbol geometris abstrak murni (*Identification over Cliché*).</p>
+  </header>
+
+  <!-- Insight from World-Class Design -->
+  <div class="insight-card">
+    <h3>💡 Mengapa Perisai + Centang Terasa Generik?</h3>
+    <p>
+      Studi terhadap brand-brand paling berpengaruh di dunia (Apple, Nike, Ethereum, Chase Bank, OpenZeppelin) membuktikan bahwa logo berkelas dunia <strong>tidak pernah menggambarkan fungsinya secara harfiah (klise ilustratif)</strong>. Bank tidak menggambar brankas uang, dokter gigi tidak menggambar gigi, dan auditor keamanan smart contract berkelas dunia tidak menggambar kartun perisai dan centang checklist antivirus. Logo legendaris adalah <strong>gestur visual tunggal yang berakar pada matematika, integritas garis, dan gestalt psikologi</strong>.
+    </p>
+  </div>
+
+  <div class="archetype-grid">
+
+    <!-- Card 1: The Apex Portal -->
+    <div class="card">
+      <div class="card-header">
+        <span class="tag tag-emerald">Mahakarya 1 &bull; Architectural Portal</span>
+        <h2>The Apex Portal</h2>
+        <p class="sub">Gerbang Suaka Terbuka &amp; Permata Kriptografi</p>
+      </div>
+      <div class="canvas">
+        <img src="world_class_v2/v2-1-portal.png" alt="The Apex Portal">
+      </div>
+      <!-- Favicon Scaling Test -->
+      <div class="scale-row">
+        <div class="scale-box">
+          <img src="world_class_v2/v2-1-portal.png" width="16" height="16" alt="16px">
+          <div class="scale-label">16px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-1-portal.png" width="24" height="24" alt="24px">
+          <div class="scale-label">24px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-1-portal.png" width="48" height="48" alt="48px">
+          <div class="scale-label">48px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-1-portal.png" width="96" height="96" alt="96px">
+          <div class="scale-label">96px</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="section-label">Filosofi Desain</div>
+        <p>Terinspirasi oleh monumen gerbang arsitektur dan prinsip <em>National Geographic</em>. Menggabungkan dua pilar simetris yang melengkung membentuk gerbang perlindungan yang terbuka lebar.</p>
+        <ul class="values-list">
+          <li><strong>🤝 Murah Hati &amp; Mempermudah:</strong> Gerbang terbuka lebar tanpa pagar penghalang. Melambangkan auditor yang mudah diakses, mempermudah tim developer melangkah ke mainnet.</li>
+          <li><strong>💎 Amanah (The Keystone):</strong> Di puncak kubah terdapat permata belah ketupat emerald (<em>the keystone</em>) yang mengunci kekuatan seluruh bangunan.</li>
+          <li><strong>🔍 Jujur &amp; Transparan:</strong> Garis ganda tembus pandang (<em>pure wireframe portal</em>).</li>
+          <li><strong>⚡ Simple &amp; Scalable:</strong> Tetap terbaca kokoh pada ukuran 16px favicon.</li>
+        </ul>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-primary" href="world_class_v2/v2-1-portal.svg" download>Unduh SVG</a>
+        <a class="btn btn-accent" href="world_class_v2/v2-1-portal.pdf" download>Unduh PDF</a>
+        <a class="btn btn-secondary" href="world_class_v2/v2-1-portal.png" download>Unduh PNG</a>
+      </div>
+    </div>
+
+    <!-- Card 2: The Triquetra of Trust -->
+    <div class="card">
+      <div class="card-header">
+        <span class="tag tag-blue">Mahakarya 2 &bull; Topological Knot</span>
+        <h2>The Triquetra of Trust</h2>
+        <p class="sub">Simpul Tiga Pilar Keamanan &amp; Lensa Kebenaran</p>
+      </div>
+      <div class="canvas">
+        <img src="world_class_v2/v2-3-triquetra.png" alt="The Triquetra of Trust">
+      </div>
+      <!-- Favicon Scaling Test -->
+      <div class="scale-row">
+        <div class="scale-box">
+          <img src="world_class_v2/v2-3-triquetra.png" width="16" height="16" alt="16px">
+          <div class="scale-label">16px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-3-triquetra.png" width="24" height="24" alt="24px">
+          <div class="scale-label">24px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-3-triquetra.png" width="48" height="48" alt="48px">
+          <div class="scale-label">48px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-3-triquetra.png" width="96" height="96" alt="96px">
+          <div class="scale-label">96px</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="section-label">Filosofi Desain</div>
+        <p>Terinspirasi oleh simpul topologis <em>OpenZeppelin</em> dan <em>International Woolmark</em>. Tiga kurva dinamis yang saling mengunci membentuk lensa penglihatan audit (<em>the auditor's eye</em>).</p>
+        <ul class="values-list">
+          <li><strong>🔗 Menepati Janji:</strong> Tiga simpul saling mengunci tanpa terputus, melambangkan integritas janji dan komitmen audit yang tak tergoyahkan.</li>
+          <li><strong>👁️ Jujur &amp; Transparan:</strong> Bagian tengah membentuk bukaan lensa mata elang yang tembus pandang, meneliti setiap byte kode tanpa bias.</li>
+          <li><strong>🌿 Murah Hati:</strong> Kurva organik yang mengalir bebas dari ketegangan sudut kasar militer.</li>
+          <li><strong>🚀 Berkualitas Tinggi:</strong> Melambangkan 3 pilar: <em>Formal Verification, Stateful Fuzzing, dan Manual Review</em>.</li>
+        </ul>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-primary" href="world_class_v2/v2-3-triquetra.svg" download>Unduh SVG</a>
+        <a class="btn btn-accent" href="world_class_v2/v2-3-triquetra.pdf" download>Unduh PDF</a>
+        <a class="btn btn-secondary" href="world_class_v2/v2-3-triquetra.png" download>Unduh PNG</a>
+      </div>
+    </div>
+
+    <!-- Card 3: The Cipher Octagon -->
+    <div class="card">
+      <div class="card-header">
+        <span class="tag tag-purple">Mahakarya 3 &bull; Mathematical Monolith</span>
+        <h2>The Cipher Octagon</h2>
+        <p class="sub">Oktagon Kriptografi Presisi Chermayeff &amp; Geismar</p>
+      </div>
+      <div class="canvas">
+        <img src="world_class_v2/v2-2-octagon.png" alt="The Cipher Octagon">
+      </div>
+      <!-- Favicon Scaling Test -->
+      <div class="scale-row">
+        <div class="scale-box">
+          <img src="world_class_v2/v2-2-octagon.png" width="16" height="16" alt="16px">
+          <div class="scale-label">16px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-2-octagon.png" width="24" height="24" alt="24px">
+          <div class="scale-label">24px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-2-octagon.png" width="48" height="48" alt="48px">
+          <div class="scale-label">48px</div>
+        </div>
+        <div class="scale-box">
+          <img src="world_class_v2/v2-2-octagon.png" width="96" height="96" alt="96px">
+          <div class="scale-label">96px</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="section-label">Filosofi Desain</div>
+        <p>Terinspirasi oleh mahakarya <em>Chase Bank (1961)</em> dan logika desentralisasi <em>Ethereum</em>. 4 modul geometris terotasi yang membentuk brankas abstrak dengan jendela transparansi sentral.</p>
+        <ul class="values-list">
+          <li><strong>🏛️ Amanah &amp; Otoritas:</strong> Fondasi kokoh bersudut 45°/90° yang merepresentasikan keamanan institusional tingkat tinggi.</li>
+          <li><strong>🔍 Transparan:</strong> Rongga persegi sempurna di tengah menegaskan keterbukaan temuan audit (<em>glass-box</em>).</li>
+          <li><strong>✨ Aksen Emerald Terisolasi:</strong> Salah satu modul berwarna hijau emerald, melambangkan komponen kode yang lolos pengujian ketat.</li>
+          <li><strong>📐 Sangat Scalable:</strong> Memiliki daya retensi memori visual tertinggi di segala resolusi.</li>
+        </ul>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-primary" href="world_class_v2/v2-2-octagon.svg" download>Unduh SVG</a>
+        <a class="btn btn-accent" href="world_class_v2/v2-2-octagon.pdf" download>Unduh PDF</a>
+        <a class="btn btn-secondary" href="world_class_v2/v2-2-octagon.png" download>Unduh PNG</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Farhan Davin &bull; Smart Contract Security Auditor &bull; World-Class Identity System 2026
+  </footer>
+</div>
+
+</body>
+</html>

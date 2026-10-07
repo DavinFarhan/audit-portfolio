@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perbandingan Sample Logo — Farhan Davin Smart Contract Auditor</title>
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --navy-dark: #071527;
+      --emerald: #059669;
+      --emerald-light: #10B981;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; padding: 40px 20px; }
+    .container { max-width: 1240px; margin: 0 auto; }
+
+    header { text-align: center; margin-bottom: 44px; }
+    .badge { display: inline-block; background: rgba(5, 150, 105, 0.12); color: var(--emerald); padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    h1 { font-size: 36px; color: var(--navy); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    p.subtitle { font-size: 17px; color: var(--muted); max-width: 780px; margin: 0 auto; }
+
+    /* Comparison Head-to-Head Banner */
+    .compare-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 900px) {
+      .compare-container { grid-template-columns: 1fr; }
+    }
+
+    .sample-box {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .sample-box:hover {
+      border-color: var(--emerald);
+      transform: translateY(-2px);
+    }
+
+    .sample-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+      background: #FAFBFD;
+    }
+    .sample-tag {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .tag-a { background: #0B1F3A; color: #FFF; }
+    .tag-b { background: #059669; color: #FFF; }
+
+    .sample-header h2 { font-size: 24px; color: var(--navy); font-weight: 800; }
+    .sample-header p { font-size: 14px; color: var(--muted); margin-top: 4px; }
+
+    /* Canvas Areas */
+    .canvas-section { padding: 32px 24px; text-align: center; border-bottom: 1px solid var(--border); background: #FFF; }
+    .canvas-label { font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 16px; }
+    .canvas-preview { min-height: 220px; display: flex; align-items: center; justify-content: center; }
+    .canvas-preview img { max-width: 100%; max-height: 220px; object-fit: contain; }
+
+    .canvas-dark { background: var(--navy-dark); color: #FFF; }
+    .canvas-dark .canvas-label { color: #94A3B8; }
+
+    /* Scale Test Row */
+    .scale-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 20px;
+      background: #F1F5F9;
+      border-bottom: 1px solid var(--border);
+    }
+    .scale-item { text-align: center; }
+    .scale-item img { display: block; margin: 0 auto 6px; }
+    .scale-caption { font-size: 11px; font-weight: 600; color: var(--muted); }
+
+    /* Philosophy Breakdown */
+    .philosophy-body { padding: 24px; flex-grow: 1; }
+    .val-item { margin-bottom: 14px; }
+    .val-item strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 2px; }
+    .val-item p { font-size: 13.5px; color: #475569; }
+
+    /* Action Buttons */
+    .action-row {
+      padding: 20px 24px;
+      background: #FAFBFD;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+    .btn-navy { background: var(--navy); color: #FFF; }
+    .btn-navy:hover { background: #162F52; }
+    .btn-emerald { background: var(--emerald); color: #FFF; }
+    .btn-emerald:hover { background: #047857; }
+    .btn-outline { background: #FFF; border: 1px solid var(--border); color: #334155; }
+    .btn-outline:hover { background: #F1F5F9; }
+
+    /* Matrix Table */
+    .matrix-section { margin-top: 40px; background: #FFF; border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .matrix-title { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: #F8FAFC; color: var(--navy); font-weight: 700; }
+    td:first-child { font-weight: 600; color: var(--navy); }
+    .tag-score { display: inline-block; font-weight: 700; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+    .score-green { background: #D1FAE5; color: #065F46; }
+    .score-blue { background: #DBEAFE; color: #1E40AF; }
+
+    footer { text-align: center; padding: 48px 0 20px; font-size: 14px; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">Brand Evaluation &amp; Design Samples</div>
+    <h1>Sample Logo: Rekomendasi A vs Rekomendasi B</h1>
+    <p class="subtitle">Dua interpretasi visual presisi yang memenuhi filosofi: <em>Jujur, Transparan, Amanah, Menepati Janji, Profesional, Berkualitas, Mempermudah, dan Murah Hati</em> dengan karakter <em>Simple, Scalable, dan Fleksibel</em>.</p>
+  </header>
+
+  <!-- Side-by-Side Cards -->
+  <div class="compare-container">
+
+    <!-- SAMPLE A -->
+    <div class="sample-box">
+      <div class="sample-header">
+        <span class="sample-tag tag-a">Rekomendasi A</span>
+        <h2>Open Aegis Refined</h2>
+        <p>Mikro-Penyempurnaan Kelengkungan Mahkota &amp; Verified Ray Presisi</p>
+      </div>
+
+      <!-- Preview 1: Symbol -->
+      <div class="canvas-section">
+        <div class="canvas-label">1. Standalone Symbol (Simbol Murni)</div>
+        <div class="canvas-preview">
+          <img src="samples/sample-a-symbol.png" alt="Sample A Symbol">
+        </div>
+      </div>
+
+      <!-- Preview 2: Stacked Cover -->
+      <div class="canvas-section" style="background:#FAFBFD;">
+        <div class="canvas-label">2. Stacked Layout (Sampul Laporan PDF)</div>
+        <div class="canvas-preview">
+          <img src="samples/sample-a-stacked.png" alt="Sample A Stacked" style="max-height: 240px;">
+        </div>
+      </div>
+
+      <!-- Preview 3: Horizontal -->
+      <div class="canvas-section">
+        <div class="canvas-label">3. Horizontal Layout (Header &amp; Web)</div>
+        <div class="canvas-preview">
+          <img src="samples/sample-a-horizontal.png" alt="Sample A Horizontal" style="max-height: 120px;">
+        </div>
+      </div>
+
+      <!-- Scalability Test (16px, 24px, 48px) -->
+      <div class="scale-row">
+        <div class="scale-item">
+          <img src="samples/sample-a-symbol.png" width="16" height="16" alt="16px">
+          <div class="scale-caption">Favicon 16px</div>
+        </div>
+        <div class="scale-item">
+          <img src="samples/sample-a-symbol.png" width="24" height="24" alt="24px">
+          <div class="scale-caption">App 24px</div>
+        </div>
+        <div class="scale-item">
+          <img src="samples/sample-a-symbol.png" width="48" height="48" alt="48px">
+          <div class="scale-caption">Avatar 48px</div>
+        </div>
+        <div class="scale-item">
+          <img src="samples/sample-a-symbol.png" width="96" height="96" alt="96px">
+          <div class="scale-caption">Badge 96px</div>
+        </div>
+      </div>
+
+      <!-- Philosophy Details -->
+      <div class="philosophy-body">
+        <div class="val-item">
+          <strong>🌿 Murah Hati (Welcoming &amp; Gentle Arc)</strong>
+          <p>Bahu atas perisai dihaluskan dengan kurva Bezier mengalir (*golden fillet*), celah mahkota atas lebih lapang (72px) tanpa sudut patah kaku. Menghilangkan arogansi benteng tertutup, mengundang dialog hangat.</p>
+        </div>
+        <div class="val-item">
+          <strong>⚡ Mempermudah (Frictionless Simplicity)</strong>
+          <p>Hanya 2 goresan vektor berkesinambungan. Tidak ada huruf monogram di dalam perisai, langsung menyampaikan pesan tanpa kerumitan kognitif.</p>
+        </div>
+        <div class="val-item">
+          <strong>🔍 Jujur, Transparan &amp; Amanah</strong>
+          <p>Wireframe berongga tembus pandang (*glass-box*) membingkai perisai kokoh yang melindungi dana protokol Web3.</p>
+        </div>
+        <div class="val-item">
+          <strong>✅ Menepati Janji &amp; Berkualitas</strong>
+          <p>Centang emerald memotong keluar menembus batas perisai kanan atas dengan negative space 18px presisi, melambangkan standar kerja di atas rata-rata.</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-row">
+        <a class="btn btn-navy" href="samples/sample-a-symbol.svg" download>Unduh SVG</a>
+        <a class="btn btn-emerald" href="samples/sample-a-stacked.pdf" download>Unduh PDF Cover</a>
+        <a class="btn btn-outline" href="samples/sample-a-horizontal.png" download>Unduh PNG</a>
+      </div>
+    </div>
+
+
+    <!-- SAMPLE B -->
+    <div class="sample-box">
+      <div class="sample-header">
+        <span class="sample-tag tag-b">Rekomendasi B</span>
+        <h2>The Embracing Haven</h2>
+        <p>Konsep Alternatif Baru: Dua Sayap/Tangan Merangkul &amp; Verified Anchor</p>
+      </div>
+
+      <!-- Preview 1: Symbol -->
+      <div class="canvas-section">
+        <div class="canvas-label">1. Standalone Symbol (Simbol Murni)</div>
+        <div class="canvas-preview">
+          <img src="samples/sample-b-symbol.png" alt="Sample B Symbol">
+        </div>
+      </div>
+
+      <!-- Preview 2: Stacked Cover -->
+      <div class="canvas-section" style="background:#FAFBFD;">
+        <div class="canvas-label">2. Stacked Layout (Sampul Laporan PDF)</div>
+        <div class="canvas-preview">
+          <img src="samples/sample-b-stacked.png" alt="Sample B Stacked" style="max-height: 240px;">
+        </div>
+      </div>
+
+      <!-- Preview 3: Horizontal -->
+      <div class="canvas-section">
+        <div class="canvas-label">3. Horizontal Layout (Header &amp; Web)</div>
+        <div class="canvas-preview">
+          <img src="samples/sample-b-horizontal.png" alt="Sample B Horizontal" style="max-height: 120px;">
+        </div>
+      </div>
+
+      <!-- Scalability Test (16px, 24px, 48px) -->
+      <div class="scale-row">
+        <div class="scale-item">
+          <img src="samples/sample-b-symbol.png" width="16" height="16" alt="16px">
+          <div class="scale-caption">Favicon 16px</div>
+        </div>
+        <div class="scale-item">
+          <img src="samples/sample-b-symbol.png" width="24" height="24" alt="24px">
+          <div class="scale-caption">App 24px</div>
+        </div>
+        <div class="scale-item">
+          <img src="samples/sample-b-symbol.png" width="48" height="48" alt="48px">
+          <div class="scale-caption">Avatar 48px</div>
+        </div>
+        <div class="scale-item">
+          <img src="samples/sample-b-symbol.png" width="96" height="96" alt="96px">
+          <div class="scale-caption">Badge 96px</div>
+        </div>
+      </div>
+
+      <!-- Philosophy Details -->
+      <div class="philosophy-body">
+        <div class="val-item">
+          <strong>🤲 Murah Hati (Embracing Sanctuary)</strong>
+          <p>Siluet dua lengkungan yang mekar ke atas menyerupai sepasang telapak tangan yang menengadah atau sayap merangkul (*open hands*). Menggambarkan kemurahan hati auditor dalam membimbing dan menjaga mitra protokol.</p>
+        </div>
+        <div class="val-item">
+          <strong>⚡ Mempermudah (Accessible &amp; Gentle Guide)</strong>
+          <p>Bentuk kurva yang sangat organik dan tidak mengintimidasi. Memberikan rasa tenang bagi developer yang membaca laporan temuan audit.</p>
+        </div>
+        <div class="val-item">
+          <strong>⚓ Amanah &amp; Transparan (Trust Base Anchor)</strong>
+          <p>Lengkung pondasi bawah (*base anchor*) menjaga kestabilan geometri, melambangkan komitmen amanah yang berakar kokoh.</p>
+        </div>
+        <div class="val-item">
+          <strong>✅ Menepati Janji &amp; Berkualitas</strong>
+          <p>Centang verifikasi memotong keluar dari sayap kanan, melambangkan kepastian verifikasi kode yang tuntas dan bebas celah fatal.</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-row">
+        <a class="btn btn-navy" href="samples/sample-b-symbol.svg" download>Unduh SVG</a>
+        <a class="btn btn-emerald" href="samples/sample-b-stacked.pdf" download>Unduh PDF Cover</a>
+        <a class="btn btn-outline" href="samples/sample-b-horizontal.png" download>Unduh PNG</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Comparison Matrix Table -->
+  <div class="matrix-section">
+    <h3 class="matrix-title">📊 Matriks Evaluasi Filosofi &amp; Karakter Teknis</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Nilai / Kriteria</th>
+          <th>Sample A: Open Aegis Refined</th>
+          <th>Sample B: The Embracing Haven</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jujur &amp; Transparan</td>
+          <td><span class="tag-score score-green">10/10</span> Wireframe berongga simetris murni (*glass-box*)</td>
+          <td><span class="tag-score score-green">10/10</span> Berongga organik terbuka tanpa isian gelap</td>
+        </tr>
+        <tr>
+          <td>Amanah (Trust &amp; Shield)</td>
+          <td><span class="tag-score score-green">10/10</span> Bentuk perisai klasik pertahanan kuat</td>
+          <td><span class="tag-score score-blue">9.5/10</span> Perlindungan berbasis suaka/tempat berlindung ramah</td>
+        </tr>
+        <tr>
+          <td>Menepati Janji</td>
+          <td><span class="tag-score score-green">10/10</span> Centang verifikasi emerald presisi tegas</td>
+          <td><span class="tag-score score-green">10/10</span> Centang emerald tegas memotong keluar sayap</td>
+        </tr>
+        <tr>
+          <td>Profesionalitas</td>
+          <td><span class="tag-score score-green">10/10</span> Tegas, otoritatif, presisi geometris</td>
+          <td><span class="tag-score score-blue">9.5/10</span> Modern, humanis, ramah gaya institusi modern</td>
+        </tr>
+        <tr>
+          <td>Berkualitas Tinggi</td>
+          <td><span class="tag-score score-green">10/10</span> Sinar centang menembus batas kanan atas</td>
+          <td><span class="tag-score score-green">10/10</span> Sinar centang melampaui batas sayap kanan</td>
+        </tr>
+        <tr>
+          <td>Mempermudah (Simplicity)</td>
+          <td><span class="tag-score score-green">10/10</span> Garis halus mempermudah aliran fokus mata</td>
+          <td><span class="tag-score score-green">10/10</span> Bentuk kurva ramah menghilangkan ketegangan</td>
+        </tr>
+        <tr>
+          <td>Murah Hati (Generosity)</td>
+          <td><span class="tag-score score-blue">9.5/10</span> Mahkota atas terbuka lebar (72px) tanpa sudut runcing</td>
+          <td><span class="tag-score score-green">10/10</span> Gestur dua tangan/sayap terbuka menyambut hangat</td>
+        </tr>
+        <tr>
+          <td>Simple, Scalable &amp; Fleksibel</td>
+          <td><span class="tag-score score-green">10/10</span> Sempurna dari favicon 16px hingga sampul A4</td>
+          <td><span class="tag-score score-green">10/10</span> Sangat tajam di semua ukuran tanpa distorsi</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    Farhan Davin — Smart Contract Security Auditor &bull; Brand Identity Design Samples 2026
+  </footer>
+</div>
+
+</body>
+</html>

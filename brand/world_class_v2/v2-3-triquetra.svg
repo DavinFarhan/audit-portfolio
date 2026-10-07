@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="The Triquetra of Trust">
+  <title>The Triquetra of Trust</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Ribbon 1: Upper Apex Shield (Deep Navy) -->
+    <path d="M 256 70 
+             C 360 170 380 320 256 430
+             C 132 320 152 170 256 70 Z" 
+          stroke="#0B1F3A" stroke-width="32"/>
+          
+    <!-- Ribbon 2: Left Embracing Arc (Murah Hati & Mempermudah) -->
+    <path d="M 120 330 
+             C 170 190 310 160 390 280
+             C 270 390 170 380 120 330 Z" 
+          stroke="#0B1F3A" stroke-width="32" opacity="0.9"/>
+          
+    <!-- Ribbon 3: Ascending Emerald Ray (Menepati Janji & Kualitas) -->
+    <path d="M 392 330 
+             C 342 190 202 160 122 280
+             C 242 390 342 380 392 330 Z" 
+          stroke="#059669" stroke-width="32"/>
+  </g>
+</svg>

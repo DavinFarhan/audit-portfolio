@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Sample A - Open Aegis Refined">
+  <title>Sample A: Open Aegis Refined</title>
+  <defs>
+    <!-- Knockout band parallel to the rising verified checkmark (slope approx -45 deg) -->
+    <clipPath id="cut-a">
+      <path clip-rule="evenodd" d="M-100 -100 H612 V612 H-100 Z
+               M340 330 L530 140 L480 90 L290 280 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Refined Aegis with Sweeping Welcoming Crown Arc (Approachable, Generous, Honest Wireframe) -->
+  <path clip-path="url(#cut-a)"
+        d="M216 78 C170 78 116 104 96 156 V254 C96 360 168 430 256 466 C344 430 416 360 416 254 V156 C396 104 342 78 296 78"
+        fill="none" stroke="#0B1F3A" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Verified Ray (Dynamic, High Quality, Fulfilling Promises) -->
+  <polyline points="160,274 234,348 466,116"
+            fill="none" stroke="#059669" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

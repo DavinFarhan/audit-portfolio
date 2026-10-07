@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="The Apex Portal">
+  <title>The Apex Portal</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The Great Welcoming Arch (Murah Hati, Amanah, Mempermudah) -->
+    <!-- Two symmetrical pillars that curve inward to form a protective yet open portal -->
+    <path d="M 120 424 
+             V 240 
+             C 120 130 190 76 256 76 
+             C 322 76 392 130 392 240 
+             V 424" 
+          stroke="#0B1F3A" stroke-width="36"/>
+          
+    <!-- Inner Portal Line (Glass-Box Transparency / Wireframe Double Path) -->
+    <path d="M 184 424 
+             V 260 
+             C 184 196 216 156 256 156 
+             C 296 156 328 196 328 260 
+             V 424" 
+          stroke="#059669" stroke-width="26"/>
+          
+    <!-- The Keystone Diamond (Amanah, Menepati Janji, Cryptographic Verity) -->
+    <!-- Floating in the upper aperture as the unshakeable capstone -->
+    <polygon points="256,60 286,96 256,132 226,96" 
+             fill="#059669" stroke="#059669" stroke-width="4"/>
+  </g>
+</svg>

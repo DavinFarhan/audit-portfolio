@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 480" width="1440" height="480">
+  <g transform="translate(30, -16)">
+    
+  <title>Masterpiece 3: The Architectural Cipher FD</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The Monolinear FD Circuit: Unbroken Single Path -->
+    <!-- Starts at base of F, rises, forms F top, curves into D arc, grounds at bottom -->
+    <path d="M 148 424 
+             V 88 
+             H 276 
+             C 380 88 436 156 436 256 
+             C 436 356 380 424 276 424 
+             H 148"
+          stroke="#0B1F3A" stroke-width="36"/>
+          
+    <!-- Central F Arm & Dynamic Verification Beam (Emerald #059669) -->
+    <!-- Extends horizontally from F spine and terminates with a golden chamfer -->
+    <path d="M 148 256 H 312" stroke="#059669" stroke-width="36"/>
+    
+    <!-- Ascending Vector Node (Subtle 45-deg truth beacon) -->
+    <circle cx="364" cy="204" r="16" fill="#059669"/>
+  </g>
+
+  </g>
+  <text x="540" y="246" font-family="'Inter', -apple-system, sans-serif"
+        font-weight="800" font-size="88" fill="#0B1F3A" letter-spacing="2">FARHAN DAVIN</text>
+  <text x="544" y="316" font-family="'Inter', -apple-system, sans-serif"
+        font-weight="700" font-size="30" fill="#059669" letter-spacing="6">SMART CONTRACT AUDITOR</text>
+  <rect x="544" y="342" width="140" height="4" rx="2" fill="#0B1F3A" opacity="0.3"/>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <rect width="1000" height="1000" fill="#070E18" rx="0"/>
+  <g id="executive_broad_dark">
+    
+    <!-- Facet 1: Central Top Rhombus/Spire -->
+    <polygon points="500,210 364.3,431.2 500,505 635.7,431.2" 
+             fill="#1E293B" stroke="#F8FAFC" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Facet 2: Upper Left Wing -->
+    <polygon points="500,210 270,380 364.3,431.2" 
+             fill="#162338" stroke="#F8FAFC" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Facet 3: Upper Right Wing -->
+    <polygon points="500,210 635.7,431.2 730,380" 
+             fill="#1A283D" stroke="#F8FAFC" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Facet 4: Lower Left Flank -->
+    <polygon points="270,380 270,585 500,505 364.3,431.2" 
+             fill="#0F1A2C" stroke="#F8FAFC" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Facet 5: Lower Right Flank -->
+    <polygon points="730,380 635.7,431.2 500,505 730,585" 
+             fill="#132136" stroke="#F8FAFC" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Left Blade -->
+    <path d="M 500,505 L 270,585 L 500,810 L 500,657 A 32 32 0 0 1 500,593 L 500,505 Z" 
+          fill="#F59E0B" stroke="#F8FAFC" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Right Blade -->
+    <path d="M 500,505 L 500,593 A 32 32 0 0 1 500,657 L 500,810 L 730,585 L 500,505 Z" 
+          fill="#D97706" stroke="#F8FAFC" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Breather Hole Ring -->
+    <circle cx="500" cy="625" r="32" fill="#F8FAFC"/>
+    <!-- Cryptographic Verification Node -->
+    <circle cx="500" cy="625" r="14" fill="#070E18"/>
+    <!-- Vertical Ink Slit -->
+    <line x1="500" y1="657" x2="500" y2="810" stroke="#F8FAFC" stroke-width="12" stroke-linecap="square"/>
+    
+  </g>
+</svg>

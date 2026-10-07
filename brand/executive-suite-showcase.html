@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Suite — Executive Broad Nib Variants Showcase</title>
+  <style>
+    :root {
+      --navy: #0B192C;
+      --navy-dark: #070E18;
+      --amber: #F59E0B;
+      --amber-dark: #D97706;
+      --emerald: #059669;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; padding: 40px 20px; transition: background 0.3s, color 0.3s; }
+    .container { max-width: 1240px; margin: 0 auto; }
+
+    header { text-align: center; margin-bottom: 40px; }
+    .badge { display: inline-block; background: rgba(245, 158, 11, 0.15); color: #B45309; padding: 6px 18px; border-radius: 999px; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+    h1 { font-size: 36px; color: var(--navy); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    p.subtitle { font-size: 16px; color: var(--muted); max-width: 760px; margin: 0 auto; }
+
+    /* Interactive Playground Box */
+    .playground {
+      background: var(--navy-dark);
+      color: #FFF;
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      margin-bottom: 48px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+    }
+    .playground-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 20px;
+    }
+    .playground-header h2 { font-size: 22px; color: #F59E0B; font-weight: 800; }
+    
+    .controls { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .control-group { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .control-group label { font-weight: 600; color: #CBD5E1; }
+    .slider { width: 140px; cursor: pointer; }
+    .btn-toggle {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #FFF;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .btn-toggle.active, .btn-toggle:hover {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: #000;
+    }
+
+    .interactive-canvas-box {
+      border-radius: 12px;
+      padding: 48px 24px;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .canvas-bg-black { background: #000000; }
+    .canvas-bg-navy { background: #070E18; }
+    .canvas-bg-white { background: #FFFFFF; }
+    .canvas-bg-paper { background: #F8FAFC; border: 1px dashed #CBD5E1; }
+
+    #live-preview-img {
+      max-height: 250px;
+      max-width: 100%;
+      object-fit: contain;
+      transition: opacity 0.1s ease;
+    }
+
+    /* Grid of All Master Variants */
+    .section-title { font-size: 22px; font-weight: 800; color: var(--navy); margin: 40px 0 20px; display: flex; align-items: center; gap: 10px; }
+    .section-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--amber); border-radius: 3px; }
+
+    .variants-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .card-canvas {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+    }
+    .card-canvas.dark-black { background: #000000; }
+    .card-canvas.dark-navy { background: #070E18; }
+    .card-canvas.light-white { background: #FFFFFF; border-bottom: 1px solid var(--border); }
+    .card-canvas.checkerboard {
+      background-color: #F1F5F9;
+      background-image: linear-gradient(45deg, #E2E8F0 25%, transparent 25%), linear-gradient(-45deg, #E2E8F0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #E2E8F0 75%), linear-gradient(-45deg, transparent 75%, #E2E8F0 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-canvas img { max-width: 100%; max-height: 170px; object-fit: contain; }
+
+    .card-meta { padding: 18px 20px; flex-grow: 1; background: #FAFBFD; border-top: 1px solid var(--border); }
+    .card-meta h4 { font-size: 15px; color: var(--navy); font-weight: 700; margin-bottom: 4px; }
+    .card-meta p { font-size: 12.5px; color: var(--muted); margin-bottom: 12px; }
+
+    .tag-row { display: flex; gap: 6px; }
+    .btn-dl { font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 6px; text-decoration: none; display: inline-block; }
+    .dl-navy { background: var(--navy); color: #FFF; }
+    .dl-amber { background: var(--amber); color: #FFF; }
+    .dl-outline { background: #FFF; border: 1px solid var(--border); color: #334155; }
+
+    /* Code Snippet Box */
+    pre { background: #070E18; color: #E2E8F0; padding: 20px; border-radius: 12px; font-size: 13px; overflow-x: auto; line-height: 1.5; margin-top: 10px; }
+    code { font-family: 'Consolas', 'Monaco', monospace; }
+
+    footer { text-align: center; padding: 40px 0 20px; font-size: 14px; color: var(--muted); border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">Master Brand System</div>
+    <h1>Executive Broad Nib — Katalog Varian Lengkap</h1>
+    <p class="subtitle">Seluruh variasi identitas visual resmi: Background Hitam (Dark Mode), Kontrol Opacity Watermark (10% - 50%), Master Transparan, Monokrom Cetak, dan Format Dokumen PDF.</p>
+  </header>
+
+  <!-- Interactive Live Playground -->
+  <div class="playground">
+    <div class="playground-header">
+      <div>
+        <h2>🎛️ Interactive Variant &amp; Opacity Playground</h2>
+        <p style="font-size:13px; color:#94A3B8;">Uji coba tingkat transparansi dan warna latar belakang secara langsung (real-time).</p>
+      </div>
+      <div class="controls">
+        <div class="control-group">
+          <label>Warna Latar:</label>
+          <button class="btn-toggle" onclick="setBg('black')">Hitam OLED</button>
+          <button class="btn-toggle active" onclick="setBg('navy')">Dark Navy</button>
+          <button class="btn-toggle" onclick="setBg('white')">Putih</button>
+          <button class="btn-toggle" onclick="setBg('paper')">Kertas Audit</button>
+        </div>
+        <div class="control-group">
+          <label>Opacity:</label>
+          <input type="range" class="slider" min="5" max="100" value="100" id="opacitySlider" oninput="changeOpacity(this.value)">
+          <span id="opacityVal" style="font-weight:700; color:#F59E0B; width:45px;">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Interactive Preview Canvas -->
+    <div class="interactive-canvas-box canvas-bg-navy" id="previewCanvas">
+      <img id="live-preview-img" src="executive_suite/nib-master-transparent.png" alt="Live Preview">
+    </div>
+  </div>
+
+
+  <!-- 1. Dark Mode Variations -->
+  <h2 class="section-title">1. Versi Background Hitam &amp; Dark Mode</h2>
+  <div class="variants-grid">
+
+    <!-- Card: Dark Pitch Black Framed -->
+    <div class="card">
+      <div class="card-canvas dark-black">
+        <img src="executive_suite/nib-dark-pitch-black-framed.png" alt="Pitch Black Framed">
+      </div>
+      <div class="card-meta">
+        <h4>Pitch Black Framed (#000000)</h4>
+        <p>Latar hitam pekat OLED dengan bingkai outline putih bersinar &amp; bilah emas menyala.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-dark-pitch-black-framed.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-dark-pitch-black-framed.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-dark-pitch-black-framed.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Dark Navy Framed -->
+    <div class="card">
+      <div class="card-canvas dark-navy">
+        <img src="executive_suite/nib-dark-navy-framed.png" alt="Dark Navy Framed">
+      </div>
+      <div class="card-meta">
+        <h4>Dark Navy Framed (#070E18)</h4>
+        <p>Latar navy malam mewah dengan aksen faset sapphire dan kontras garis presisi.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-dark-navy-framed.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-dark-navy-framed.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-dark-navy-framed.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Dark Mode Stacked Cover -->
+    <div class="card">
+      <div class="card-canvas dark-navy">
+        <img src="executive_suite/nib-stacked-dark.png" alt="Dark Stacked Cover" style="max-height: 190px;">
+      </div>
+      <div class="card-meta">
+        <h4>Dark Stacked (Sampul PDF Gelap)</h4>
+        <p>Format halaman judul formal laporan audit versi tema gelap (Dark Mode).</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-stacked-dark.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-stacked-dark.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-stacked-dark.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Dark Mode Horizontal -->
+    <div class="card">
+      <div class="card-canvas dark-navy">
+        <img src="executive_suite/nib-horizontal-dark.png" alt="Dark Horizontal" style="max-height: 80px;">
+      </div>
+      <div class="card-meta">
+        <h4>Dark Horizontal (Header Web)</h4>
+        <p>Banner horizontal navbar dan running header laporan dalam mode gelap.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-horizontal-dark.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-horizontal-dark.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-horizontal-dark.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- 2. Watermark & Low Opacity Variations -->
+  <h2 class="section-title">2. Versi Opacity Diturunkan (Watermark Dokumen)</h2>
+  <div class="variants-grid">
+
+    <!-- Card: Watermark 10% -->
+    <div class="card">
+      <div class="card-canvas checkerboard">
+        <img src="executive_suite/nib-watermark-10pct.png" alt="Watermark 10%">
+      </div>
+      <div class="card-meta">
+        <h4>Watermark 10% (Ultra Subtle)</h4>
+        <p>Tingkat transparansi ideal untuk diletakkan di balik teks temuan laporan audit PDF.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-watermark-10pct.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-watermark-10pct.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-watermark-10pct.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Watermark 25% -->
+    <div class="card">
+      <div class="card-canvas checkerboard">
+        <img src="executive_suite/nib-watermark-25pct.png" alt="Watermark 25%">
+      </div>
+      <div class="card-meta">
+        <h4>Watermark 25% (Medium Balance)</h4>
+        <p>Keseimbangan ideal untuk halaman judul, slide deck transparan, dan sertifikat.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-watermark-25pct.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-watermark-25pct.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-watermark-25pct.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Watermark 50% -->
+    <div class="card">
+      <div class="card-canvas checkerboard">
+        <img src="executive_suite/nib-watermark-50pct.png" alt="Watermark 50%">
+      </div>
+      <div class="card-meta">
+        <h4>Watermark 50% (Semi-Transparan)</h4>
+        <p>Stempel semi-transparan untuk latar belakang cover transisi bab laporan.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-watermark-50pct.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-watermark-50pct.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-watermark-50pct.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Master Transparent Cutout (100%) -->
+    <div class="card">
+      <div class="card-canvas checkerboard">
+        <img src="executive_suite/nib-master-transparent.png" alt="Master Transparent">
+      </div>
+      <div class="card-meta">
+        <h4>Master Transparent (100% Solid Cutout)</h4>
+        <p>Berkas master tanpa kotak background putih. Siap ditempel di media desain apa pun.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-master-transparent.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-master-transparent.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-master-transparent.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- 3. Monochrome & Special Editions -->
+  <h2 class="section-title">3. Versi Monokrom (Stempel) &amp; Emerald Verified</h2>
+  <div class="variants-grid">
+
+    <!-- Card: Monochrome Black -->
+    <div class="card">
+      <div class="card-canvas light-white">
+        <img src="executive_suite/nib-monochrome-black.png" alt="Monochrome Black">
+      </div>
+      <div class="card-meta">
+        <h4>Monokrom Hitam Murni</h4>
+        <p>Satu warna hitam murni untuk cap stempel fisik dokumen resmi atau cetak hitam-putih.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-navy" href="executive_suite/nib-monochrome-black.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-monochrome-black.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-monochrome-black.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Monochrome White -->
+    <div class="card">
+      <div class="card-canvas dark-navy">
+        <img src="executive_suite/nib-monochrome-white.png" alt="Monochrome White">
+      </div>
+      <div class="card-meta">
+        <h4>Monokrom Putih Murni</h4>
+        <p>Satu warna putih untuk watermark di atas video, foto banner, atau kop surat gelap.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-monochrome-white.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-monochrome-white.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-monochrome-white.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Emerald Dark Mode -->
+    <div class="card">
+      <div class="card-canvas dark-navy">
+        <img src="executive_suite/nib-dark-emerald-framed.png" alt="Emerald Dark">
+      </div>
+      <div class="card-meta">
+        <h4>Emerald Security (Dark Mode)</h4>
+        <p>Aksen hijau emerald di background gelap untuk penegas status protokol telah lolos audit.</p>
+        <div class="tag-row">
+          <a class="btn-dl dl-amber" href="executive_suite/nib-dark-emerald-framed.svg" download>SVG</a>
+          <a class="btn-dl dl-navy" href="executive_suite/nib-dark-emerald-framed.pdf" download>PDF</a>
+          <a class="btn-dl dl-outline" href="executive_suite/nib-dark-emerald-framed.png" download>PNG</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Latex Integration Snippet -->
+  <h2 class="section-title">Panduan Penerapan Watermark pada PDF Laporan Audit (LaTeX / Eisvogel)</h2>
+  <p style="color:var(--muted); font-size:14px; margin-bottom:8px;">Untuk menambahkan logo ini sebagai watermark transparan di tengah halaman laporan audit PDF Anda, gunakan package <code>eso-pic</code>:</p>
+  <pre><code>% Di preamble template LaTeX / Pandoc:
+\usepackage{eso-pic}
+\AddToShipoutPictureBG{
+  \AtPageCenter{
+    \makebox[0pt]{
+      % Gunakan nib-watermark-10pct.pdf agar sangat halus di balik tulisan
+      \includegraphics[width=0.45\paperwidth]{brand/executive_suite/nib-watermark-10pct.pdf}
+    }
+  }
+}</code></pre>
+
+  <footer>
+    Farhan Davin &bull; Smart Contract Security Auditor &bull; Executive Broad Nib Master Brand System 2026
+  </footer>
+</div>
+
+<script>
+  function setBg(type) {
+    const canvas = document.getElementById('previewCanvas');
+    canvas.className = 'interactive-canvas-box';
+    if (type === 'black') canvas.classList.add('canvas-bg-black');
+    else if (type === 'navy') canvas.classList.add('canvas-bg-navy');
+    else if (type === 'white') canvas.classList.add('canvas-bg-white');
+    else if (type === 'paper') canvas.classList.add('canvas-bg-paper');
+
+    // Update active button
+    document.querySelectorAll('.btn-toggle').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // Switch image based on bg
+    const img = document.getElementById('live-preview-img');
+    if (type === 'black') {
+      img.src = 'executive_suite/nib-dark-pitch-black-framed.png';
+    } else if (type === 'navy') {
+      img.src = 'executive_suite/nib-dark-navy-framed.png';
+    } else {
+      img.src = 'executive_suite/nib-master-transparent.png';
+    }
+  }
+
+  function changeOpacity(val) {
+    document.getElementById('live-preview-img').style.opacity = val / 100;
+    document.getElementById('opacityVal').innerText = val + '%';
+  }
+</script>
+
+</body>
+</html>

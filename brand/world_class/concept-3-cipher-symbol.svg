@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="The Cipher Monogram FD">
+  <title>Master Concept 3: The Cipher Monogram FD</title>
+  <defs>
+    <!-- Vector knockout for the ascending truth strike -->
+    <clipPath id="fd-cut">
+      <path clip-rule="evenodd" d="M-100 -100 H612 V612 H-100 Z
+               M310 320 L510 120 L460 70 L260 270 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Architectural F-D Glyph -->
+  <!-- Left Pillar & F Arm (Structure, Discipline, Quality) -->
+  <path d="M 140 100 V 412" stroke="#0B1F3A" stroke-width="36" stroke-linecap="round"/>
+  <path d="M 140 100 H 310" stroke="#0B1F3A" stroke-width="36" stroke-linecap="round"/>
+  <path d="M 140 236 H 260" stroke="#0B1F3A" stroke-width="32" stroke-linecap="round"/>
+  
+  <!-- Sweeping D Curve (Defense, Diligence, Welcoming Embrace) -->
+  <path clip-path="url(#fd-cut)"
+        d="M 230 100 
+           C 360 100 410 180 410 256 
+           C 410 332 360 412 230 412 
+           H 140" 
+        fill="none" stroke="#0B1F3A" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Ascending Verification Strike (Precision Emerald Ray) -->
+  <polyline points="180,290 244,354 466,132"
+            fill="none" stroke="#059669" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

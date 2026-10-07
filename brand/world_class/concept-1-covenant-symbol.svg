@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="The Topological Covenant">
+  <title>Master Concept 1: The Topological Covenant</title>
+  <!-- Single Continuous Knot of Trust (Unbroken, Open, Generous, Infinite Trust) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Base Guardian Arc (Deep Navy #0B1F3A) -->
+    <path d="M 136 170 
+             C 90 240 100 340 160 396 
+             C 214 446 298 446 352 396 
+             C 412 340 422 240 376 170" 
+          stroke="#0B1F3A" stroke-width="34"/>
+    
+    <!-- Welcoming Crown Loop (Murah Hati & Mempermudah) -->
+    <path d="M 136 170 
+             C 170 110 226 94 256 126
+             C 286 94 342 110 376 170" 
+          stroke="#0B1F3A" stroke-width="34"/>
+
+    <!-- Dynamic Emerald Ascent (Truth, Verification, Fulfilling Promises) -->
+    <path d="M 194 276
+             L 246 332 
+             L 436 104"
+          stroke="#059669" stroke-width="36"/>
+    
+    <!-- Optical Central Nexus Point (Amanah & Kejujuran Kriptografis) -->
+    <circle cx="256" cy="230" r="14" fill="#0B1F3A"/>
+  </g>
+</svg>

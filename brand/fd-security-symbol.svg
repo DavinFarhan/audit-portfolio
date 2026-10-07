@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="FD Security symbol">
+  <title>FD Security symbol</title>
+  <defs>
+    <!-- Knock-out band parallel to the checkmark's long stroke (vector clip, no raster mask) -->
+    <clipPath id="s-cut">
+      <path clip-rule="evenodd" d="M-100 -100H612V612H-100Z
+               M346.7 319.8 L517.1 167.1 L474.5 119.5 L304.1 272.2 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Shield: hollow outline with a deliberate opening at the top -->
+  <path clip-path="url(#s-cut)"
+        d="M238 61 L96 104 V250 C96 352 164 424 256 464 C348 424 416 352 416 250 V104 L274 61"
+        fill="none" stroke="#0B1F3A" stroke-width="30" stroke-linejoin="round" stroke-linecap="butt"/>
+  <!-- F monogram -->
+  <path fill="#0B1F3A" d="M150 140 H240 V170 H180 V181 H226 V209 H180 V250 H150 Z"/>
+  <!-- D monogram -->
+  <path fill="#0B1F3A" fill-rule="evenodd"
+        d="M262 140 H304 A55 55 0 0 1 304 250 H262 Z
+           M292 170 H304 A25 25 0 0 1 304 220 H292 Z"/>
+  <!-- Verified checkmark breaking out of the shield -->
+  <polyline points="180,320 236,376 466,170" fill="none" stroke="#059669"
+            stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" width="640" height="720" role="img" aria-label="Farhan Davin - Smart Contract Auditor">
+  <title>Farhan Davin - Smart Contract Auditor</title>
+  <!-- Centered Symbol (Symbol width 512, offset = (640-512)/2 = 64) -->
+  <g transform="translate(64, 20)">
+    <defs>
+      <clipPath id="aegis-cut-st">
+        <path clip-rule="evenodd" d="M-100 -100 H612 V612 H-100 Z
+                 M334 326 L524 140 L482 96 L292 282 Z"/>
+      </clipPath>
+    </defs>
+    <!-- Open Aegis -->
+    <path clip-path="url(#aegis-cut-st)"
+          d="M232 64 L96 112 V254 C96 358 166 428 256 464 C346 428 416 358 416 254 V112 L280 64"
+          fill="none" stroke="#0B1F3A" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Verified Ray -->
+    <polyline points="166,270 236,340 464,120"
+              fill="none" stroke="#059669" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Wordmark Section Centered at x=320 -->
+  <text x="320" y="595" text-anchor="middle"
+        font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', Arial, sans-serif"
+        font-weight="800" font-size="82" fill="#0B1F3A" letter-spacing="2">FARHAN DAVIN</text>
+  <text x="320" y="652" text-anchor="middle"
+        font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', Arial, sans-serif"
+        font-weight="700" font-size="28" fill="#059669" letter-spacing="6">SMART CONTRACT AUDITOR</text>
+  <!-- Balanced Anchor Accent Bar -->
+  <rect x="250" y="675" width="140" height="4" rx="2" fill="#0B1F3A" opacity="0.25"/>
+</svg>
