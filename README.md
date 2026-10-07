@@ -152,7 +152,6 @@ rule calling_any_function_should_result_in_each_contract_having_the_same_state(
 | **Thunder Loan** | Sep 2026 | Flash Loan Protocol, AMM Oracles, UUPS Proxy (475 nSLOC) | Flash Loan Reentrancy, Spot Oracle Manipulation, Storage Layout Collision | [📄 PDF Report](./reports/ThunderLoan-Security-Audit-Report.pdf) | [📝 Markdown](./reports/ThunderLoan-Security-Audit-Report.md) |
 | **Boss Bridge** | Sep 2026 | Cross-Chain L1-L2 Token Bridge (215 nSLOC) | Signature Replay Attacks, Arbitrary `transferFrom` Address, Low-Level Call Hijack | [📄 PDF Report](./reports/BossBridge-Security-Audit-Report.pdf) | [📝 Markdown](./reports/BossBridge-Security-Audit-Report.md) |
 | **T-Swap** | Sep 2026 | Constant-Product AMM ($x \cdot y = k$) (345 nSLOC) | Pool Reserve Drain via Reward Incentive, Math Precision Flaws, Missing Slippage | [📄 PDF Report](./reports/TSwap-Security-Audit-Report.pdf) | [📝 Markdown](./reports/TSwap-Security-Audit-Report.md) |
-| **Algo Stablecoin** | Sep 2026 | Exogenous Collateral Stablecoin in Vyper (390 SLoC) | 18-Dec Scaling Undervaluation on WBTC, Flawed Health Factor Monotonicity Check | [📄 PDF Report](./reports/AlgoStablecoin-Security-Audit-Report.pdf) | [📝 Markdown](./reports/AlgoStablecoin-Security-Audit-Report.md) |
 | **Puppy Raffle** | Sep 2026 | NFT Raffle & Lottery System (143 nSLOC) | Reentrancy in `refund()`, Weak PRNG Exploit, Unbounded Loop $O(n^2)$ DoS | [📄 PDF Report](./reports/PuppyRaffle-Security-Audit-Report.pdf) | [📝 Markdown](./reports/PuppyRaffle-Security-Audit-Report.md) |
 | **PasswordStore** | Sep 2026 | Private Password Vault (25 nSLOC) | On-Chain Storage Slot Transparency, Missing Access Control in `setPassword()` | [📄 PDF Report](./reports/PasswordStore-Security-Audit-Report.pdf) | [📝 Markdown](./reports/PasswordStore-Security-Audit-Report.md) |
 
@@ -224,10 +223,10 @@ Every protocol review adheres to an 8-phase disciplined security framework:
 
 ## 🧰 Tools & Technology Stack
 
-- **Testing & Execution Frameworks:** Foundry (`forge`, `cast`, `anvil`), Moccasin / Titanoboa, Hardhat
+- **Testing & Execution Framework:** Foundry (`forge`, `cast`, `anvil`)
 - **Formal Verification:** Certora Prover, CVL (Certora Verification Language)
-- **Static Analysis & Linters:** Slither, Aderyn, Solhint
-- **Languages:** Solidity (`^0.8.0`), Vyper (`^0.4.0`), CVL, Python
+- **Static Analysis:** Slither, Aderyn
+- **Smart Contract & Low-Level Languages:** Solidity, Yul, Huff, CVL
 - **Report Compilation:** Pandoc, Eisvogel LaTeX Engine, KaTeX
 
 ---
