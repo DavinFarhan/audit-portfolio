@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./brand/executive_suite/nib-horizontal-dark.svg" alt="Farhan Davin - Smart Contract Auditor" width="700"/>
+  <img src="./.github/assets/logo.svg" alt="Farhan Davin - Smart Contract Auditor" width="700"/>
 </p>
 
 <p align="center">
@@ -106,14 +106,12 @@ While fuzzing tests millions of randomized states, **Formal Verification (FV)** 
 
 I write specifications using the **Certora Verification Language (CVL)** for math libraries, state-machine transitions, and access-control invariants.
 
-#### In-Repository Case Studies:
-- **Case Study 1: [01-math-master](./formal-verification/01-math-master/)**  
+#### Formal Verification Case Studies:
+- **Case Study 1: Math Masters Fixed-Point Library (`MulWadUp`)**  
   *Target:* Fixed-point arithmetic scaling and rounding up (`MulWadUp.sol`).  
-  *CVL Specification:* [`MulWadUp.spec`](./formal-verification/01-math-master/certora/MulWadUp.spec)  
-  *Proof:* Proves exact bounded ceiling arithmetic ($x \cdot y = 0 \implies 0$ else $(x \cdot y - 1)/\text{WAD} + 1$) without overflow vulnerabilities across full `uint256` domains.
-- **Case Study 2: [02-gas-bad-nft-marketplace](./formal-verification/02-gas-bad-nft-marketplace/)**  
+  *Proof:* SMT solver verification proving exact bounded ceiling arithmetic ($x \cdot y = 0 \implies 0$ else $(x \cdot y - 1)/\text{WAD} + 1$) without overflow vulnerabilities across full `uint256` domains.
+- **Case Study 2: NFT Marketplace Differential Formal Verification**  
   *Target:* State transition equivalence between standard and gas-optimized marketplace implementations (`GasBadNftMarketplace.sol` vs. `NftMarketplace.sol`).  
-  *CVL Specification:* [`GasBadNft.spec`](./formal-verification/02-gas-bad-nft-marketplace/certora/spec/GasBadNft.spec)  
   *Proof:* Proves parametric function equivalence (`method f, method f2`) and verifies event emission integrity via storage hooks (`hook Sstore`) and ghost variable counters.
 
 #### Sample CVL Specification Snippet:
@@ -146,14 +144,14 @@ rule calling_any_function_should_result_in_each_contract_having_the_same_state(
 > [!NOTE]
 > **Transparency Disclosure**: The reports below represent intensive, comprehensive security reviews conducted on protocols from the **Cyfrin Updraft Smart Contract Security Curriculum** and independent adversarial research. They showcase my end-to-end auditing rigor, vulnerability analysis, and publication-ready report drafting. I am currently expanding into live public competitive contests (CodeHawks, Sherlock, Code4rena) and private protocol reviews.
 
-| Protocol | Date | Architecture / Scope | Core Vulnerabilities Identified | PDF Report | Markdown Report |
-| :--- | :---: | :--- | :--- | :---: | :---: |
-| **Vault Guardians** | Sep 2026 | ERC4626 Vaults, Uniswap V2, Aave V3 (589 nSLOC) | Reentrancy, Fee Bypass via `mint()`, Liquidity Starvation DoS, Slippage Flaws | [📄 PDF Report](./reports/VaultGuardians-Security-Audit-Report.pdf) | [📝 Markdown](./reports/VaultGuardians-Security-Audit-Report.md) |
-| **Thunder Loan** | Sep 2026 | Flash Loan Protocol, AMM Oracles, UUPS Proxy (475 nSLOC) | Flash Loan Reentrancy, Spot Oracle Manipulation, Storage Layout Collision | [📄 PDF Report](./reports/ThunderLoan-Security-Audit-Report.pdf) | [📝 Markdown](./reports/ThunderLoan-Security-Audit-Report.md) |
-| **Boss Bridge** | Sep 2026 | Cross-Chain L1-L2 Token Bridge (215 nSLOC) | Signature Replay Attacks, Arbitrary `transferFrom` Address, Low-Level Call Hijack | [📄 PDF Report](./reports/BossBridge-Security-Audit-Report.pdf) | [📝 Markdown](./reports/BossBridge-Security-Audit-Report.md) |
-| **T-Swap** | Sep 2026 | Constant-Product AMM ($x \cdot y = k$) (345 nSLOC) | Pool Reserve Drain via Reward Incentive, Math Precision Flaws, Missing Slippage | [📄 PDF Report](./reports/TSwap-Security-Audit-Report.pdf) | [📝 Markdown](./reports/TSwap-Security-Audit-Report.md) |
-| **Puppy Raffle** | Sep 2026 | NFT Raffle & Lottery System (143 nSLOC) | Reentrancy in `refund()`, Weak PRNG Exploit, Unbounded Loop $O(n^2)$ DoS | [📄 PDF Report](./reports/PuppyRaffle-Security-Audit-Report.pdf) | [📝 Markdown](./reports/PuppyRaffle-Security-Audit-Report.md) |
-| **PasswordStore** | Sep 2026 | Private Password Vault (25 nSLOC) | On-Chain Storage Slot Transparency, Missing Access Control in `setPassword()` | [📄 PDF Report](./reports/PasswordStore-Security-Audit-Report.pdf) | [📝 Markdown](./reports/PasswordStore-Security-Audit-Report.md) |
+| Protocol | Date | Architecture / Scope | Core Vulnerabilities Identified | Audit Report |
+| :--- | :---: | :--- | :--- | :---: |
+| **Vault Guardians** | Sep 2026 | ERC4626 Vaults, Uniswap V2, Aave V3 (589 nSLOC) | Reentrancy, Fee Bypass via `mint()`, Liquidity Starvation DoS, Slippage Flaws | [📄 View PDF Report](./VaultGuardians-Security-Audit-Report.pdf) |
+| **Thunder Loan** | Sep 2026 | Flash Loan Protocol, AMM Oracles, UUPS Proxy (475 nSLOC) | Flash Loan Reentrancy, Spot Oracle Manipulation, Storage Layout Collision | [📄 View PDF Report](./ThunderLoan-Security-Audit-Report.pdf) |
+| **Boss Bridge** | Sep 2026 | Cross-Chain L1-L2 Token Bridge (215 nSLOC) | Signature Replay Attacks, Arbitrary `transferFrom` Address, Low-Level Call Hijack | [📄 View PDF Report](./BossBridge-Security-Audit-Report.pdf) |
+| **T-Swap** | Sep 2026 | Constant-Product AMM ($x \cdot y = k$) (345 nSLOC) | Pool Reserve Drain via Reward Incentive, Math Precision Flaws, Missing Slippage | [📄 View PDF Report](./TSwap-Security-Audit-Report.pdf) |
+| **Puppy Raffle** | Sep 2026 | NFT Raffle & Lottery System (143 nSLOC) | Reentrancy in `refund()`, Weak PRNG Exploit, Unbounded Loop $O(n^2)$ DoS | [📄 View PDF Report](./PuppyRaffle-Security-Audit-Report.pdf) |
+| **PasswordStore** | Sep 2026 | Private Password Vault (25 nSLOC) | On-Chain Storage Slot Transparency, Missing Access Control in `setPassword()` | [📄 View PDF Report](./PasswordStore-Security-Audit-Report.pdf) |
 
 ---
 

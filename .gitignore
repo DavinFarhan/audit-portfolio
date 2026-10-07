@@ -19,12 +19,7 @@ img2_*
 comparison_*
 cover_preview_*
 
-# Scratch directories
-assets/
-audit-data/
-
-# OS & Editor files
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# Local research, branding, and report archives
+brand/
+reports/
+formal-verification/
