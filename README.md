@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./brand/audit-logo-horizontal.svg" alt="Farhan Davin - Smart Contract Auditor" width="620"/>
+  <img src="./brand/executive_suite/nib-horizontal-dark.svg" alt="Farhan Davin - Smart Contract Auditor" width="700"/>
 </p>
 
 <p align="center">
